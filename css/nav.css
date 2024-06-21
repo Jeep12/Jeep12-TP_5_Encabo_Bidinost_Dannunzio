@@ -1,12 +1,142 @@
+:root {
+    --main-bg-color: #46466A;
+    --second-bg-color:rgb(50, 50, 68,100);
+    --primary-color: white;
+   
+}
+
 .navigation {
     width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: var(--second-bg-color);
 
 }
-.pre-nav {
 
+.pre-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+ 
+}
+.logo img {
+
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    
+}
+.social {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+
+}
+.logo .social ul {
+    margin-top: 15px;
+    font-size: 20px;
+
+
+}
+.logo .social ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 5px;
+    color: #BDB4F9;
+}
+
+.account {
+
+    margin-right: 30px;
+    padding: 5px;
+}
+.account button {
+    border: none;
+    background-color: #46466A;
+    margin: 5px;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
 }
 .navbar {
-    background-color: red !important;
+    background-color: transparent !important;
+}
+.collapse {
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-around ;
+
+
+}
+
+.navbar-toggler {
+    margin: auto;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+}
+.report {
+    background-color: #BDB4F9;
+    color: #46466A;
+}
+
+
+@media (max-width: 518px) {
+    .collapse {
+        display:block;
+    }
+    .logo img {
+        margin-left: 25px;
+    }
+    .navigation {
+    }
+    .navbar {
+        padding: 0px !important;
+    }
+    .pre-nav {
+        padding: 0px;
+        margin: 0px;
+    }
+    .account {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0;
+        padding: 15px;
+        border-radius: 35% 65% 25% 75% / 48% 33% 34% 18%;
+        background-color: #BDB4F9;
+        
+    }
+    .account button {
+        border: none;
+        margin: 5px;
+        padding: 10px;
+        color: white;
+        border-radius: 10px;
+        width: 150px;
+    }
+    .logo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social {
+    }
+    .social ul {
+
+    }
+    .social ul li {
+        
+    }
 }
