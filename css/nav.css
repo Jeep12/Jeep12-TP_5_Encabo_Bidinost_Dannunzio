@@ -1,142 +1,184 @@
 :root {
     --main-bg-color: #46466A;
-    --second-bg-color:rgb(50, 50, 68,100);
+    --second-bg-color: rgba(50, 50, 68, 0.616);
     --primary-color: white;
-   
 }
 
 .navigation {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: var(--second-bg-color);
-
+    padding: 0px;
 }
-
-.pre-nav {
+.prenav {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-  
-}
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
- 
-}
-.logo img {
-
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    
 }
 .social {
-    height: 100%;
-    width: 100%;
-    padding: 0px;
-
-}
-.logo .social ul {
-    margin-top: 15px;
-    font-size: 20px;
-
-
-}
-.logo .social ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 5px;
-    color: #BDB4F9;
+    display: flex;
 }
 
-.account {
-
-    margin-right: 30px;
-    padding: 5px;
-}
-.account button {
-    border: none;
-    background-color: #46466A;
-    margin: 5px;
-    padding: 10px;
-    color: white;
-    border-radius: 10px;
-}
-.navbar {
-    background-color: transparent !important;
-}
 .collapse {
     display: flex;
     flex-direction: row;
-    
-    justify-content: space-around ;
-
-
+    justify-content:space-between;
+    padding: 2px;
 }
 
+.navbar {
+    background-color: var(--main-bg-color) !important;
+    padding: 0px;
+}
+.dropdown-menu {
+    background-color: rgb(161, 161, 161) !important;
+}
+
+.social .logo img {
+    border-radius: 50%;
+}
 .navbar-toggler {
     margin: auto;
 }
-
-.nav-link {
-    text-transform: uppercase;
-    color: white;
-    font-weight: 600;
-}
-.report {
-    background-color: #BDB4F9;
-    color: #46466A;
-}
-
-
-@media (max-width: 518px) {
-    .collapse {
-        display:block;
+@media (max-width: 991px) {
+    .social {
+        align-items: center;
+     
     }
-    .logo img {
-        margin-left: 25px;
+    .social .networks ul li i {
+        font-size: 25px;
     }
-    .navigation {
+    .social div {
+        display: flex;
+        align-items: center !important;
+        margin-top: 15px;
     }
-    .navbar {
-        padding: 0px !important;
+    .social .logo {
+        margin-top: 0px;
     }
-    .pre-nav {
+    .social .logo img {
+        width: 75px;
+    }
+    .networks ul {
+        margin-left: 10px;
+        display: flex;
         padding: 0px;
-        margin: 0px;
+        gap: 15px;
+    
+    }
+    .contact ol li {
+        display: inline-block;
+        margin-left: 5px;
+        font-size: 13px;
+        
+    }
+    .contact ol li i {
+        font-size: 20px;
+    }
+    .networks ul li {
+        display: inline-block;
+        
+    }
+    .collapse {
+        display: block;
+    }
+    .account {
+        margin-top: 0px;
+        width: 50%;
+        display: flex;
+        align-items: center !important;
+        padding-right: 10px;
+    }
+    .wrapper-links  {
+        display: flex !important;
+        gap: 5px;
+    }
+    .wrapper-links a {
+        padding: 5px;
+        background-color: #46466A;
+        width: 160px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        
+    }
+}
+
+@media (max-width: 760px) {
+
+    .social {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+            
+        
+
     }
     .account {
         display: flex;
-        flex-direction: column;
-        margin-right: 0;
-        padding: 15px;
-        border-radius: 35% 65% 25% 75% / 48% 33% 34% 18%;
-        background-color: #BDB4F9;
-        
+        align-items: center;
+        justify-content: center;
+        width: 50%;
     }
-    .account button {
-        border: none;
-        margin: 5px;
-        padding: 10px;
-        color: white;
-        border-radius: 10px;
-        width: 150px;
-    }
-    .logo {
+    .wrapper-links  {
         display: flex;
         flex-direction: column;
+        gap: 15px;
+        width: 70%;
     }
-
-    .social {
-    }
-    .social ul {
-
-    }
-    .social ul li {
+    .wrapper-links a {
+        padding: 5px;
+        background-color: #46466A;
+        width: 100%;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white;
+        text-align: center;
         
     }
+    .social .logo {
+        display: flex;
+        justify-content: center;
+    }
+    .social .logo img {
+        width: 90px;
+    }
+
+    .networks {
+   
+    }
+    .networks ul {
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        font-size: 20px;
+
+
+    }
+    .networks ul li {
+        list-style: none;
+        display: inline-block;
+       
+    }
+    .social .contact {
+        display: none;
+        
+    }
+    .social .contact ol  {
+        padding: 5px !important;
+        text-align: center;
+
+    }
+    .social .contact ol li  {
+        list-style: none ;
+        gap: 2px;
+        font-size: 15px;
+        
+    }
+    .social .contact ol li i {
+        font-size: 20px;
+    }
+
+
+
 }
