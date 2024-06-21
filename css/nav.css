@@ -1,0 +1,12 @@
+.navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.pre-nav {
+
+}
+.navbar {
+    background-color: red !important;
+}
