@@ -1,7 +1,11 @@
 :root {
-    --main-bg-color: #46466A;
-    --second-bg-color: rgba(50, 50, 68, 0.616);
-    --primary-color: white;
+    --primary-color: #BDB4F9;
+    --secondary-color: #9B8BF4;
+    --third-color: #46466a;
+}
+
+.social .logo img {
+    width: 80px;
 }
 
 .navigation {
@@ -9,77 +13,212 @@
     flex-direction: column;
     padding: 0px;
 }
+
 .prenav {
     display: flex;
     justify-content: space-between;
 }
+
+.networks,
+.contact {
+    margin-top: 20px;
+}
+
 .social {
     display: flex;
+    width: 60%;
+}
+
+.networks {
+    display: flex;
+    align-items: center;
+}
+
+.networks ul li i {
+    color: #46466A;
+}
+
+.social ul {
+    padding: 0px;
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.social .networks ul li {
+    list-style: none;
+    display: inline-block;
+    font-size: 22px;
+
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+}
+
+.contact ol {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact ol li {
+    list-style: none;
+    margin-left: 20px;
+    font-family: 'Helvetica Oblique';
+    font-size: 13px;
+
+
+}
+
+.contact ol li i {
+    color: #46466A;
+
+}
+
+.account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40%;
+}
+
+.wrapper-links {
+    margin-left: 15px;
+}
+
+.wrapper-links a {
+    padding: 10px;
+    background-color: var(--third-color);
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-family: 'Helvetica Oblique';
+    font-size: 13px;
+
 }
 
 .collapse {
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
-    padding: 2px;
+    justify-content: space-between;
+}
+
+.nav-item {
+    margin-top: 2px;
+    text-align: center;
+
 }
 
 .navbar {
-    background-color: var(--main-bg-color) !important;
+    background: rgb(70,70,106);
+    background: linear-gradient(90deg, rgba(70,70,106,1) 0%, rgba(70,70,106,1) 35%, rgba(121,121,179,1) 100%);
     padding: 0px;
 }
+
+
+.navbar-nav {}
+
+.navbar-nav li a {
+    color: white !important;
+    text-transform: uppercase;
+    font-family: 'Helvetica Bold Oblique';
+
+    font-size: 13px;
+
+}
+
+.navbar-nav li a:hover {
+    background-color: transparent;
+}
+
+
 .dropdown-menu {
-    background-color: rgb(161, 161, 161) !important;
+    background-image: url('../images/BGFOOTER2.png');
+    border-radius: 0;
+
 }
 
 .social .logo img {
     border-radius: 50%;
 }
+
 .navbar-toggler {
     margin: auto;
 }
+
+.report {
+    background-color: var(--secondary-color);
+    color: #46466A;
+    font-family: 'Helvetica';
+    margin-right: 75px;
+}
+
+
 @media (max-width: 991px) {
     .social {
+        display: flex;
         align-items: center;
-     
+        justify-content: center;
+
     }
+
     .social .networks ul li i {
         font-size: 25px;
     }
+
     .social div {
         display: flex;
         align-items: center !important;
         margin-top: 15px;
     }
+
     .social .logo {
         margin-top: 0px;
     }
+
     .social .logo img {
         width: 75px;
     }
+
     .networks ul {
         margin-left: 10px;
         display: flex;
         padding: 0px;
+
         gap: 15px;
-    
+
     }
+
+    .contact ol {
+        flex-wrap: wrap;
+
+    }
+
     .contact ol li {
-        display: inline-block;
         margin-left: 5px;
         font-size: 13px;
-        
+        width: 160px;
+        display: flex;
+        align-items: center;
+
     }
+
     .contact ol li i {
-        font-size: 20px;
+        font-size: 17px;
     }
+
     .networks ul li {
         display: inline-block;
-        
+
     }
+
     .collapse {
         display: block;
     }
+
     .account {
         margin-top: 0px;
         width: 50%;
@@ -87,19 +226,26 @@
         align-items: center !important;
         padding-right: 10px;
     }
-    .wrapper-links  {
+
+    .wrapper-links {
         display: flex !important;
         gap: 5px;
     }
+
     .wrapper-links a {
         padding: 5px;
-        background-color: #46466A;
+        background-color: var(--third-color);
         width: 160px;
         border-radius: 10px;
         text-decoration: none;
         color: white;
         text-align: center;
-        
+
+    }
+
+    .report {
+        margin: auto;
+        width: 250px;
     }
 }
 
@@ -109,43 +255,47 @@
         display: flex;
         flex-direction: column;
         width: 50%;
-            
-        
+
+
 
     }
+
     .account {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 50%;
     }
-    .wrapper-links  {
+
+    .wrapper-links {
         display: flex;
         flex-direction: column;
         gap: 15px;
         width: 70%;
     }
+
     .wrapper-links a {
         padding: 5px;
-        background-color: #46466A;
+        background-color: var(--third-color);
         width: 100%;
         border-radius: 10px;
         text-decoration: none;
         color: white;
         text-align: center;
-        
+
     }
+
     .social .logo {
         display: flex;
         justify-content: center;
     }
+
     .social .logo img {
         width: 90px;
     }
 
-    .networks {
-   
-    }
+    .networks {}
+
     .networks ul {
         padding: 0px;
         display: flex;
@@ -155,29 +305,36 @@
 
 
     }
+
     .networks ul li {
         list-style: none;
         display: inline-block;
-       
+
     }
+
     .social .contact {
         display: none;
-        
+
     }
-    .social .contact ol  {
+
+    .social .contact ol {
         padding: 5px !important;
         text-align: center;
 
     }
-    .social .contact ol li  {
-        list-style: none ;
+
+    .social .contact ol li {
+        list-style: none;
         gap: 2px;
         font-size: 15px;
-        
+
     }
+
     .social .contact ol li i {
         font-size: 20px;
     }
+
+
 
 
 
