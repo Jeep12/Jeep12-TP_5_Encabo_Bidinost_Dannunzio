@@ -41,7 +41,8 @@
 
                 <div class="wrapper-links">
                     <a href="register.html"><i class="fa-solid fa-user"></i> Registrarse</a>
-                    <a href=""><i class="fa-solid fa-user-plus"></i> Ingresar</a>
+                    <a href="" data-bs-toggle="modal" data-bs-target="#singIn"><i class="fa-solid fa-user-plus"></i>
+                        Ingresar</a>
                 </div>
 
             </div>
@@ -75,12 +76,10 @@
                                 Formas de ayudar
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Banco Provincia</a></li>
-                                <li><a class="dropdown-item" href="#">Banco Nacion</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Mercado Pago</a></li>
+                                <li><a class="dropdown-item" href="#"><img class="iconBank" src="images/icobancoprovincia.png" alt="" srcset=""> Banco Provincia</a></li>
+                                <li><a class="dropdown-item" href="#"><img class="iconBank" src="images/icobanconacion.png" alt="" srcset=""> Banco Nacion</a></li>
+
+                                <li><a class="dropdown-item" href="#"><img class="iconBank" src="images/mercadopagoIco.png"> Mercado Pago</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -114,12 +113,67 @@
         </div>
     </div>
 
+    <!-- MODAL INICIAR SESION -->
+    <div class="modal modalSingIn fade" id="singIn" tabindex="-1" aria-labelledby="singInModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="singInModalLabel">INGRESAR</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+               
+                    <form action="">
+
+                        <label for="">Ingrese su email</label>
+                        <input type="password" class="password">
+
+                        <label for="">Ingrese su contraña</label>
+                        <div style="border-radius:10px; display: flex;background-color: white;align-items: center;">
+                            
+                            <input class="password" style="border:1px solid #46466a;" type="password" id="password"
+                                name="password" placeholder="Ingrese su contraseña aquí" required><span><i
+                                    style="margin-left: -32px;" class="fa-solid fa-lock"></i> </span>
+                        </div>
+                        <div class="alert alert-info mt-2" role="alert" style="padding: 3px; font-size: 13px;">
+                           <p><i class="fa-solid fa-circle-exclamation"></i> Olvidaste tu contraseña
+                            <br>
+                            Haga click <a href="">aquí</a> para recuperarla
+                            <hr >
+                            Si aun no tienes cuenta puedes registrarte clickeando <a href="register.html">Aquí</a>
+                        </p>
+    
+                   
+                        </div>
+                        <input type="submit" value="Ingresar">
+                        <hr>
+                        <button>Continuar con Google</button>
+                        <button>Continuar con facebook</button>
+                    </form>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
 
 
 
     <div class="wrapper-register">
         <div class="wrapper-img">
+            <div class="info-register">
+                <h2>ÚNETE A NUESTRA MISÍON <i class="fa-solid fa-users"></i></h2>
+                <p>Tu apoyo es crucial para rescatar y rehabilitar caballos necesitados. Al registrarte en nuestra
+                    comunidad, te mantendremos informado sobre nuestras actividades, rescates y formas en las que puedes
+                    ayudar. Juntos, podemos hacer una diferencia en la vida de estos magníficos animales.</p>
 
+
+                <p>Puedes realizar donaciones para apoyar nuestra misión a través de varias plataformas: Mercado Pago,
+                    Banco Nación y Banco Provincia. Aceptamos pagos con tarjetas Visa y MasterCard . Cada contribución,
+                    grande o pequeña, ayuda a proporcionar el cuidado y la atención que nuestros caballos rescatados
+                    necesitan."
+                </p>
+            </div>
         </div>
         <div class="form-register">
             <form class="form">
@@ -147,9 +201,9 @@
                     <label for="password">Contraseña:</label>
                     <div style="border-radius:10px; display: flex;background-color: white;align-items: center;">
 
-                        <input style="border:1px solid #46466a;" type="password" id="password" name="password"
-                            placeholder="Ingrese su contraseña aquí" required><span><i style="margin-left: -32px;"
-                                class="fa-solid fa-lock"></i> </span>
+                        <input class="password" style="border:1px solid #46466a;" type="password" id="password"
+                            name="password" placeholder="Ingrese su contraseña aquí" required><span><i
+                                style="margin-left: -32px;" class="fa-solid fa-lock"></i> </span>
                     </div>
                 </div>
                 <div class="password-info">
@@ -165,25 +219,31 @@
                     <label for="password">Repetir contraseña:</label>
                     <div style="border-radius:10px; display: flex;background-color: white;align-items: center;">
 
-                        <input type="password" id="repeatPassword" name="repeatPassword"
+                        <input class="password" type="password" id="repeatPassword" name="repeatPassword"
                             placeholder="Repita su contraseña " required><span><i style="margin-left: -32px;"
                                 class="fa-solid fa-lock"></i> </span>
                     </div>
                     <div class="password-info">
-                        <div id="length"><i class="fas fa-check iconLength" style="margin-top: 10px;"></i> Coinciden las contraseñas</div>
+                        <div id="length"><i class="fas fa-check iconLength" style="margin-top: 10px;"></i> Coinciden las
+                            contraseñas</div>
 
                     </div>
                 </div>
                 <div style="display: flex;align-items: center;">
-                    <input style="width: 20px;" type="checkbox" name="" id="">&nbsp; Estoy de acuerdo con los terminos y condiciones
+                    <input style="width: 20px;" type="checkbox" name="">&nbsp; Estoy de acuerdo con los terminos y
+                    condiciones
                 </div>
                 <br>
 
                 <input type="submit" value="Registrarse">
                 <hr>
-                <div  style="display: flex;flex-direction: column;gap: 10px;">
-                    <button style="border:none;padding:5px;background-color: #EA4335;color: white;border-radius: 10px;"><i class="fa-brands fa-google-plus"></i> Registrarse con Google</button>
-                    <button style="border:none;padding:5px;background-color: #1877F2;color: white;border-radius: 10px;"><i class="fa-brands fa-facebook"></i> Registrarse con Facebook</button>
+                <div style="display: flex;flex-direction: column;gap: 10px;">
+                    <button
+                        style="border:none;padding:5px;background-color: #EA4335;color: white;border-radius: 10px;"><i
+                            class="fa-brands fa-google-plus"></i> Registrarse con Google</button>
+                    <button
+                        style="border:none;padding:5px;background-color: #1877F2;color: white;border-radius: 10px;"><i
+                            class="fa-brands fa-facebook"></i> Registrarse con Facebook</button>
 
                 </div>
             </form>

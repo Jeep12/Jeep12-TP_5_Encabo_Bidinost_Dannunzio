@@ -1,5 +1,5 @@
 .wrapper-register {
-    width: 100%;
+    width: 80%;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -7,10 +7,27 @@
 
 }
 
+.info-register{
+    background-color: #46466A80;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.info-register p, .info-register h2{
+    width: 100%;
+    font-family: 'Helvetica';
+    color: white;
+    margin-top: 50px;
+    text-align: start;
+    text-align: center;
+}
+
 .wrapper-img {
     width: 50%;
     background: url('../images/registerimg.jpg') no-repeat;
-    background-size: contain;
+    background-size: cover;
     height: 100%;
     animation-name: slideInLeft;
     animation-duration: 1s;
@@ -41,7 +58,7 @@
     width: 50%;
 }
 .form-register form {
-    width: 60%;
+    width: 80%;
 }
 .form-register form input  {
     width: 100%;
@@ -91,8 +108,7 @@
 
     .wrapper-img {
         width: 100%;
-        background-position: 0px -100px;
-        background-size: cover;
+        background-size: ccover;
     }
 
     .form-register {

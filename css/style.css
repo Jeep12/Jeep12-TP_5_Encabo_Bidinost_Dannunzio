@@ -56,3 +56,32 @@
     src: local('Helvetica Light'), url('../utils/fonts/helvetica-light-587ebe5a59211.woff') format('woff');
 }
 
+
+.modalSingIn{
+
+}
+.modal-content{
+    border-radius: 0px;
+}
+.modal-header {
+    border: none;
+    padding: 2px;
+}
+.modal-header h1 {
+    text-align: center;
+    width:100% ;
+    color: #46466a;
+    background-color: red;
+}
+.modal-body {
+    
+}
+.modal-body form {
+    padding: 10px;
+}
+.modal-body form input {
+    width: 100% !important;
+}
+.modal-footer {
+    border: none;
+}

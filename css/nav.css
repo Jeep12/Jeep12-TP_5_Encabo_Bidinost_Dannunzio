@@ -3,7 +3,11 @@
     --secondary-color: #9B8BF4;
     --third-color: #46466a;
 }
-
+.iconBank{
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
 .social .logo img {
     width: 80px;
 }

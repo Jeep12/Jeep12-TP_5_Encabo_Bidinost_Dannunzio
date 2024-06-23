@@ -2,3 +2,27 @@
     padding: 0;
     margin: 0;
 }
+.modalSingIn{
+
+}
+.modal-content{
+    border-radius: 0px;
+}
+.modal-header {
+    border: none;
+}
+.modal-header h1 {
+    text-align: center;
+    width:100% ;
+    color: #46466a;
+}
+.modal-body {
+    form {
+        background-color: green !important;
+        width: 100px;
+    }
+}
+
+.modal-footer {
+    border: none;
+}
