@@ -19,9 +19,9 @@ formLogin.addEventListener('submit', async (event) => {
             localStorage.setItem('currentUser', JSON.stringify(authenticatedUser));
             toastAlert(`¡Bienvenido de nuevo, ${authenticatedUser.name}!`);
             setTimeout(function () {
-                window.location="index.html";
-           
-            }, 1500); 
+                window.location = "index.html";
+
+            }, 1500);
 
             console.log('Sesión iniciada correctamente para:', authenticatedUser);
         } else {
@@ -70,3 +70,20 @@ function toastAlert(text) {
         onClick: function () { } // Callback después del clic en el toast
     }).showToast();
 }
+
+let btnTogglePassword = document.getElementById("togglePasswordSingIn");
+btnTogglePassword.addEventListener("click", () => {
+    let inputPassword = document.getElementById("passwordLogin");
+    let iconLock = document.getElementById("iconLock");
+
+    if (inputPassword.type === "password") {
+        inputPassword.type = "text";
+        iconLock.classList.remove("fa-lock");
+        iconLock.classList.add("fa-lock-open");
+    } else {
+        inputPassword.type = "password";
+        iconLock.classList.remove("fa-lock-open");
+        iconLock.classList.add("fa-lock");
+    }
+});
+

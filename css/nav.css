@@ -3,14 +3,27 @@
     --secondary-color: #9B8BF4;
     --third-color: #46466a;
 }
-.iconBank{
+
+.iconBank {
     width: 32px;
     height: 32px;
     display: inline-block;
 }
+
 .social .logo img {
     width: 80px;
+    transition-duration: 1s;
+    border-radius: 50%;
+    image-rendering: pixelated;
+    
 }
+
+.social .logo img:hover {
+    border-radius: 0%;
+    cursor: pointer;
+
+}
+
 
 .navigation {
     display: flex;
@@ -40,6 +53,14 @@
 
 .networks ul li i {
     color: #46466A;
+    text-shadow: none;
+
+}
+
+.networks ul li:hover i {
+    text-shadow: 0px 0px 5px #46466A;
+    cursor: pointer;
+    color: #9B8BF4;
 }
 
 .social ul {
@@ -69,16 +90,21 @@
 .contact ol li {
     list-style: none;
     margin-left: 20px;
-    font-family: 'Helvetica Oblique';
-    font-size: 13px;
-
-
-}
-
-.contact ol li i {
+    font-family: 'Helvetica';
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
     color: #46466A;
+    font-size: 13px;
+   
 
 }
+.contact ol li:hover {
+    font-size: 15px;
+    color: #9B8BF4;
+    cursor: pointer;
+}
+
+
 
 .account {
     display: flex;
@@ -93,14 +119,25 @@
 }
 
 .wrapper-links a {
-    padding: 10px;
+    padding: 7px;
     background-color: var(--third-color);
     border-radius: 10px;
     text-decoration: none;
     color: white;
     text-align: center;
-    font-family: 'Helvetica Oblique';
+    font-family: 'Helvetica Bold Oblique';
+    letter-spacing: 1px;
+    text-transform: uppercase;
     font-size: 13px;
+    width: 140px;
+
+}
+
+.wrapper-links a:hover {
+    background-color: #9B8BF4;
+    box-shadow: inset 0 0 10px #ffffff;
+    color: #46466A;
+    /* Sombra interior */
 
 }
 
@@ -113,40 +150,56 @@
 .nav-item {
     margin-top: 2px;
     text-align: center;
+    text-shadow: 2px 1px 0px black;
+
 
 }
 
 .navbar {
-    background: rgb(70,70,106);
-    background: linear-gradient(90deg, rgba(70,70,106,1) 0%, rgba(70,70,106,1) 35%, rgba(121,121,179,1) 100%);
-    padding: 0px;
+    background: #46466A !important;
+    padding: 0px !important;
 }
 
-
 .navbar-nav {}
+
+.container-fluid {
+    padding: 5px;
+}
 
 .navbar-nav li a {
     color: white !important;
     text-transform: uppercase;
-    font-family: 'Helvetica Bold Oblique';
-
+    font-family: 'Helvetica';
     font-size: 13px;
 
 }
 
-.navbar-nav li a:hover {
-    background-color: transparent;
+
+.nav-item:hover {
+    border-left: 3px solid #9B8BF4;
+
+    border-right: 3px solid #9B8BF4;
+
+
+
 }
 
 
 .dropdown-menu {
-    border-radius: 10px;
+    border-radius: 0px;
     background-color: #46466A;
-
+    border: none;
 }
 
-.social .logo img {
-    border-radius: 50%;
+
+.dropdown-menu li :hover {
+    background-color: transparent;
+    border-bottom: 3px solid #9B8BF4;
+    border-radius: 5px;
+
+}
+.dropdownPanelUser {
+    
 }
 
 
@@ -159,51 +212,86 @@
 .report {
     background-color: var(--secondary-color);
     color: #46466A;
-    font-family: 'Helvetica';
+    font-family: 'Helvetica Compressed';
+    letter-spacing: 2px;
+    text-transform: uppercase;
     margin-right: 75px;
 }
-.account {
+
+.report:hover {
+    background-color: var(--third-color);
+    border: 2px solid #9B8BF4;
+    color: #9B8BF4;
+    box-shadow: inset 0 0 10px #9B8BF4;
+
+
 }
+
+.account {}
+
 .account ul {
     padding: 0px;
 }
+
 .account ul li {
     list-style-type: none;
     width: 175px;
     text-align: start;
     color: #46466A;
     text-shadow: 0px 0px 2px black;
-}
-.panelUser li {
     
 }
+.account ul li:hover {
+    color: #9B8BF4;
+    border: none;
+}
+
+.panelUser li {}
 
 .panelUser li ul {
     padding: 0px;
-    
+
+
 }
+
 .panelUser li ul li {
     margin-top: 2px;
     width: 100%;
     color: white !important;
+    transition-duration: 2s !important;
+    font-family: 'Helvetica';
+    letter-spacing: 1.5px;
+
+
+
 
 }
-.dropdownPanelUser li button:hover  {
-    background-color: transparent;
+.dropdownPanelUser li button {
+    text-shadow: 2px 1px 0px black;
+
 }
+.dropdownPanelUser li button:hover {
+    border-radius: 5px;
+    color: white;
+}
+
 .panelUser .dropdown-menu {
-    color: white !important;
-    border-radius: 10px;
-   
+    border-radius: 5px;
+    
+
 }
+
 
 .dropdown-item {
     color: white;
-    font-family: 'Helvetica Bold Oblique';
     font-size: 13px;
 
 }
+
 @media (max-width: 991px) {
+    .dropdown-menu li {
+        text-align: center;
+    }
     .social {
         display: flex;
         align-items: center;
@@ -213,6 +301,7 @@
 
     .social .networks ul li i {
         font-size: 25px;
+
     }
 
     .social div {
@@ -279,8 +368,9 @@
     }
 
     .navbar-toggler {
-        margin: auto ;
+        margin: auto;
     }
+
     .wrapper-links a {
         padding: 5px;
         background-color: var(--third-color);
