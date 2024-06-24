@@ -60,6 +60,7 @@
 
 .addElement {
     display: flex !important;
+    gap: 5px;
 }
 .deleteElement {
     display: none !important;

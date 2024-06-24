@@ -140,8 +140,8 @@
 
 
 .dropdown-menu {
-    background-image: url('../images/BGFOOTER2.png');
-    border-radius: 0;
+    border-radius: 10px;
+    background-color: #46466A;
 
 }
 
@@ -162,10 +162,47 @@
     font-family: 'Helvetica';
     margin-right: 75px;
 }
+.account {
+}
+.account ul {
+    padding: 0px;
+}
 .account ul li {
     list-style-type: none;
+    width: 175px;
+    text-align: start;
+    color: #46466A;
+    text-shadow: 0px 0px 2px black;
+}
+.panelUser li {
+    
 }
 
+.panelUser li ul {
+    padding: 0px;
+    
+}
+.panelUser li ul li {
+    margin-top: 2px;
+    width: 100%;
+    color: white !important;
+
+}
+.dropdownPanelUser li button:hover  {
+    background-color: transparent;
+}
+.panelUser .dropdown-menu {
+    color: white !important;
+    border-radius: 10px;
+   
+}
+
+.dropdown-item {
+    color: white;
+    font-family: 'Helvetica Bold Oblique';
+    font-size: 13px;
+
+}
 @media (max-width: 991px) {
     .social {
         display: flex;
