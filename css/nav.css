@@ -149,8 +149,11 @@
     border-radius: 50%;
 }
 
-.navbar-toggler {
-    margin: auto;
+
+
+/* Rotación del ícono cuando el dropdown se abre */
+.nav-link.dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(135deg);
 }
 
 .report {
@@ -159,7 +162,9 @@
     font-family: 'Helvetica';
     margin-right: 75px;
 }
-
+.account ul li {
+    list-style-type: none;
+}
 
 @media (max-width: 991px) {
     .social {
@@ -236,6 +241,9 @@
         gap: 5px;
     }
 
+    .navbar-toggler {
+        margin: auto ;
+    }
     .wrapper-links a {
         padding: 5px;
         background-color: var(--third-color);

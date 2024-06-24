@@ -1,0 +1,57 @@
+
+
+.modalSingIn{
+
+}
+.modal-content{
+    border-radius: 5px;
+}
+.modal-header {
+    border: none;
+    padding: 5px;
+}
+.modal-header h1 {
+    text-align: center;
+    width:100% ;
+    color: #46466a;
+}
+.modal-body {
+    
+}
+.modal-body form {
+    padding: 10px;
+}
+.modal-body form label {
+    width: 100%;
+    text-align: center;
+}
+.modal-body form input {
+    width: 100% !important;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #46466a;
+}
+.modal-body form input[type="submit"] {
+
+    border: none;
+    background-color: #46466a !important;
+    color: white;
+}
+.wrapper-google-facebook {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+.wrapper-google-facebook button {
+    border: none;
+    color: white;
+
+}
+.btnGoogle {
+
+}
+.btnMeta {
+
+}
+

@@ -31,15 +31,29 @@
 
                         <li><i class="fa-solid fa-phone"></i>&nbsp; +54 011-15024868</li>
 
-                        <li><i class="fa-solid fa-envelope"></i>&nbsp; email@gmail.com</li>
+                        <li><i class="fa-solid fa-envelope"></i>&nbsp; equus@gmail.com</li>
                     </ol>
                 </div>
             </div>
 
 
             <div class="account">
+                <ul id="panelUser" style="display: none;">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-user-gear"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><button class="dropdown-item" href="#">Mis datos</button>
+                            </li>
+                            <li><button class="dropdown-item" href="#">Cambiar contraseña</li>
 
-                <div class="wrapper-links">
+                            <li><button class="dropdown-item" href="#">Salir</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="wrapper-links" id="wrapper-links">
                     <a href="register.html"><i class="fa-solid fa-user"></i> Registrarse</a>
                     <a href="" data-bs-toggle="modal" data-bs-target="#singIn"><i class="fa-solid fa-user-plus"></i>
                         Ingresar</a>
@@ -76,10 +90,14 @@
                                 Formas de ayudar
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#"><img class="iconBank" src="images/icobancoprovincia.png" alt="" srcset=""> Banco Provincia</a></li>
-                                <li><a class="dropdown-item" href="#"><img class="iconBank" src="images/icobanconacion.png" alt="" srcset=""> Banco Nacion</a></li>
+                                <li><a class="dropdown-item" href="#"><img class="iconBank"
+                                            src="images/icobancoprovincia.png" alt="" srcset=""> Banco Provincia</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#"><img class="iconBank"
+                                            src="images/icobanconacion.png" alt="" srcset=""> Banco Nacion</a></li>
 
-                                <li><a class="dropdown-item" href="#"><img class="iconBank" src="images/mercadopagoIco.png"> Mercado Pago</a></li>
+                                <li><a class="dropdown-item" href="#"><img class="iconBank"
+                                            src="images/mercadopagoIco.png"> Mercado Pago</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -91,6 +109,8 @@
             </div>
         </nav>
     </header>
+
+
 
 
 
@@ -112,7 +132,6 @@
             </div>
         </div>
     </div>
-
     <!-- MODAL INICIAR SESION -->
     <div class="modal modalSingIn fade" id="singIn" tabindex="-1" aria-labelledby="singInModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -122,41 +141,44 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-               
-                    <form action="">
+
+                    <form action="" id="formLogin">
 
                         <label for="">Ingrese su email</label>
-                        <input type="password" class="password">
+                        <input type="email" id="emailLogin" name="emailLogin" class="password" placeholder="Ingrese su email aquí">
 
                         <label for="">Ingrese su contraña</label>
                         <div style="border-radius:10px; display: flex;background-color: white;align-items: center;">
-                            
-                            <input class="password" style="border:1px solid #46466a;" type="password" id="password"
-                                name="password" placeholder="Ingrese su contraseña aquí" required><span><i
-                                    style="margin-left: -32px;" class="fa-solid fa-lock"></i> </span>
+
+                            <input type="password" class="password" id="passwordLogin" name="passwordLogin" placeholder="Ingrese su contraseña aquí" style="border:1px solid #46466a;" required><span id="togglePasswordSingIn"><i style="margin-left: -32px;" class="fa-solid fa-lock"></i> </span>
                         </div>
                         <div class="alert alert-info mt-2" role="alert" style="padding: 3px; font-size: 13px;">
-                           <p><i class="fa-solid fa-circle-exclamation"></i> Olvidaste tu contraseña
-                            <br>
-                            Haga click <a href="">aquí</a> para recuperarla
-                            <hr >
-                            Si aun no tienes cuenta puedes registrarte clickeando <a href="register.html">Aquí</a>
-                        </p>
-    
-                   
+                            <p><i class="fa-solid fa-circle-exclamation"></i> Olvidaste tu contraseña
+                                <br>
+                                Haga click <a href="">aquí</a> para recuperarla
+                                <hr>
+                                Si aun no tienes cuenta puedes registrarte clickeando <a href="register.html">Aquí</a>
+                            </p>
+
+
                         </div>
                         <input type="submit" value="Ingresar">
                         <hr>
-                        <button>Continuar con Google</button>
-                        <button>Continuar con facebook</button>
+                        <div class="wrapper-google-facebook">
+                            <button
+                            style="border:none;padding:5px;background-color: #EA4335;color: white;border-radius: 10px;"><i
+                                class="fa-brands fa-google-plus"></i> Registrarse con Google</button>
+                        <button
+                            style="border:none;padding:5px;background-color: #1877F2;color: white;border-radius: 10px;"><i
+                                class="fa-brands fa-facebook"></i> Registrarse con Facebook</button>
+    
+                        </div>
                     </form>
                 </div>
-    
+
             </div>
         </div>
     </div>
-
-
 
 
     <div class="wrapper-register">
@@ -176,24 +198,26 @@
             </div>
         </div>
         <div class="form-register">
-            <form class="form">
+            <form class="form" id="formRegister">
                 <h2 style="width: 100%;text-align: center;">Registro</h2>
                 <div class="wrapper-name-lastname">
                     <div class="name">
                         <label for="nombre">Nombre:</label><br>
-                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre aquí" required>
+                        <input type="text" id="name" name="name" placeholder="Ingrese su nombre aquí" required>
 
                     </div>
                     <div class="last-name">
                         <label for="nombre">Apellido:</label><br>
-                        <input type="text" id="apellido" name="nombre" placeholder="Ingrese su apellido aquí" required>
+                        <input type="text" id="lastName" name="lastName" placeholder="Ingrese su apellido aquí"
+                            required>
                     </div>
                 </div>
 
                 <div class="wrapper-email">
 
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" placeholder="Ingrese su email aquí" required>
+                    <label for="email" id="emailRegister">Email:</label><br>
+                    <input type="email" id="emailRegister" name="emailRegister" placeholder="Ingrese su email aquí"
+                        required>
 
                 </div>
                 <div class="wrapper-password">
@@ -201,9 +225,10 @@
                     <label for="password">Contraseña:</label>
                     <div style="border-radius:10px; display: flex;background-color: white;align-items: center;">
 
-                        <input class="password" style="border:1px solid #46466a;" type="password" id="password"
-                            name="password" placeholder="Ingrese su contraseña aquí" required><span><i
-                                style="margin-left: -32px;" class="fa-solid fa-lock"></i> </span>
+                        <input class="password" style="border:1px solid #46466a;" type="password" id="passwordSingUp"
+                            name="passwordSingUp" placeholder="Ingrese su contraseña aquí" required><span
+                            class="togglePasswordRegister" style="cursor: pointer;" ><i style="margin-left: -32px;" class="fa-solid fa-lock iconLock"></i>
+                        </span>
                     </div>
                 </div>
                 <div class="password-info">
@@ -219,13 +244,10 @@
                     <label for="password">Repetir contraseña:</label>
                     <div style="border-radius:10px; display: flex;background-color: white;align-items: center;">
 
-                        <input class="password" type="password" id="repeatPassword" name="repeatPassword"
-                            placeholder="Repita su contraseña " required><span><i style="margin-left: -32px;"
-                                class="fa-solid fa-lock"></i> </span>
+                        <input class="password" type="password" id="repeatPasswordSingUp" name="repeatPasswordSingUp" placeholder="Repita su contraseña " required><span style="cursor: pointer;" class="togglePasswordRegister"><i style="margin-left: -32px;" class="fa-solid fa-lock iconLock"></i> </span>
                     </div>
                     <div class="password-info">
-                        <div id="length"><i class="fas fa-check iconLength" style="margin-top: 10px;"></i> Coinciden las
-                            contraseñas</div>
+                        <div id="passwordMatch"><i class="fas fa-check" id="iconPasswordMatch" style="margin-top: 10px;"></i> Coinciden las contraseñas</div>
 
                     </div>
                 </div>
@@ -246,6 +268,7 @@
                             class="fa-brands fa-facebook"></i> Registrarse con Facebook</button>
 
                 </div>
+                
             </form>
         </div>
     </div>
