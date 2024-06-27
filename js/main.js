@@ -48,3 +48,19 @@ function logout(){
     localStorage.removeItem('currentUser');
     window.location.href = 'index.html';
 }
+
+
+// Función para mostrar un mensaje de alerta usando Toastify
+function toastAlert() {
+    Toastify({
+        text: "Texto copiado",
+        duration: 3000,
+        gravity: "top", // Posición del mensaje en la pantalla
+        position: "right", // Posición del mensaje en la pantalla
+        style: {
+            fontSize: "15px",
+            backgroundImage: "linear-gradient(to right top, red, red, red, red, red)" // Cambia el color de fondo para los mensajes de error
+        },
+        onClick: function () { } // Callback después del clic en el toast
+    }).showToast();
+}

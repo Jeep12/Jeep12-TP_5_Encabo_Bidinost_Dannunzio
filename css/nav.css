@@ -3,6 +3,21 @@
     --secondary-color: #9B8BF4;
     --third-color: #46466a;
 }
+/* Estilo por defecto del botón */
+.custom-toggler {
+    border: 1px solid transparent; /* Color del borde por defecto */
+    color:#9B8BF4;
+}
+
+/* Estilo del ícono por defecto */
+.custom-toggler .navbar-toggler-icon {
+    color: red !important;
+}
+
+/* Estilo del botón cuando está enfocado */
+
+
+
 
 .iconBank {
     width: 32px;
@@ -14,8 +29,9 @@
     width: 80px;
     transition-duration: 1s;
     border-radius: 50%;
+
     image-rendering: pixelated;
-    
+
 }
 
 .social .logo img:hover {
@@ -95,9 +111,10 @@
     text-transform: uppercase;
     color: #46466A;
     font-size: 13px;
-   
+
 
 }
+
 .contact ol li:hover {
     font-size: 15px;
     color: #9B8BF4;
@@ -145,6 +162,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+   
 }
 
 .nav-item {
@@ -198,9 +216,8 @@
     border-radius: 5px;
 
 }
-.dropdownPanelUser {
-    
-}
+
+.dropdownPanelUser {}
 
 
 
@@ -223,9 +240,12 @@
     border: 2px solid #9B8BF4;
     color: #9B8BF4;
     box-shadow: inset 0 0 10px #9B8BF4;
+    animation: animationColor infinite 2s;
 
 
 }
+
+
 
 .account {}
 
@@ -239,8 +259,9 @@
     text-align: start;
     color: #46466A;
     text-shadow: 0px 0px 2px black;
-    
+
 }
+
 .account ul li:hover {
     color: #9B8BF4;
     border: none;
@@ -266,10 +287,12 @@
 
 
 }
+
 .dropdownPanelUser li button {
     text-shadow: 2px 1px 0px black;
 
 }
+
 .dropdownPanelUser li button:hover {
     border-radius: 5px;
     color: white;
@@ -277,7 +300,7 @@
 
 .panelUser .dropdown-menu {
     border-radius: 5px;
-    
+
 
 }
 
@@ -287,11 +310,28 @@
     font-size: 13px;
 
 }
-
+.wrapper-btnReport {}
+@media (max-width: 1370px) {
+    .wrapper-links a {
+        font-size: 11px !important;
+    }
+    .report {
+        font-size: 15px;
+    }
+    
+    
+}
 @media (max-width: 991px) {
     .dropdown-menu li {
         text-align: center;
     }
+    .contact ol li:hover {
+        font-size: 12px;
+        color: #9B8BF4;
+        cursor: pointer;
+    }
+    
+
     .social {
         display: flex;
         align-items: center;
@@ -334,8 +374,9 @@
 
     .contact ol li {
         margin-left: 5px;
-        font-size: 13px;
+        font-size: 12px;
         width: 160px;
+        margin-top: 5px;
         display: flex;
         align-items: center;
 
@@ -389,7 +430,13 @@
 }
 
 @media (max-width: 760px) {
-
+    .social .logo img:hover {
+        border-radius: 0%;
+        cursor: pointer;
+        box-shadow: 0px 4px 5px 2px #8e85bd;
+    
+    }
+    
     .social {
         display: flex;
         flex-direction: column;
@@ -421,6 +468,7 @@
         text-decoration: none;
         color: white;
         text-align: center;
+        
 
     }
 
@@ -477,4 +525,31 @@
 
 
 
+}
+
+@keyframes animationColor {
+    0% {
+        color: #9a93bf;
+        box-shadow: inset 0 0 10px #9a93bf;
+
+    }
+
+    30% {
+        color: #aca0eb;
+        box-shadow: inset 0 0 10px #aca0eb;
+
+    }
+
+    68%,
+    72% {
+        color: #aba4d3;
+        box-shadow: inset 0 0 10px #aba4d3;
+
+    }
+
+    100% {
+        color: #8e85bd;
+        box-shadow: inset 0 0 10px #8e85bd;
+
+    }
 }

@@ -2,13 +2,16 @@
 <html lang="en">
 
 <head>
+
+    <link rel="icon" type="image/x-icon" href="images/icopestaña.ico">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="utils/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="utils/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Equus</title>
 </head>
 
 <body>
@@ -17,7 +20,7 @@
 
             <div class="social">
                 <div class="logo">
-                    
+
                     <img src="images/logo.png" alt="" srcset="">
                 </div>
                 <div class="networks">
@@ -70,11 +73,10 @@
 
         <nav class="navbar navbar-expand-lg bg-body-tertiary ">
             <div class="container-fluid ">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                    <i class="fa-solid fa-bars"></i> </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -105,7 +107,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <div class="d-flex">
+                    <div class="d-flex wrapper-btnReport">
                         <button class="btn report" data-bs-toggle="modal" data-bs-target="#repotAbuse"> Reportar
                             abuso</button>
                     </div>
@@ -113,7 +115,6 @@
             </div>
         </nav>
     </header>
-
 
 
 
@@ -136,27 +137,35 @@
             </div>
         </div>
     </div>
+
     <!-- MODAL INICIAR SESION -->
     <div class="modal modalSingIn fade" id="singIn" tabindex="-1" aria-labelledby="singInModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="singInModalLabel">INGRESAR</h1>
+
+
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
                 </div>
                 <div class="modal-body">
 
-                    <form action="" id="formLogin">
+                    <form id="formLogin">
 
-                        <label for="">Ingrese su email</label>
-                        <input type="email" id="emailLogin" name="emailLogin" class="password" placeholder="Ingrese su email aquí">
+                        <label for="">Email:</label>
+                        <input type="email" id="emailLogin" name="emailLogin" class="password"
+                            placeholder="Ingrese su email aquí">
 
-                        <label for="">Ingrese su contraña</label>
+                        <label for="">Contraseña:</label>
                         <div style="border-radius:10px; display: flex;background-color: white;align-items: center;">
 
-                            <input type="password" class="password" id="passwordLogin" name="passwordLogin" placeholder="Ingrese su contraseña aquí" style="border:1px solid #46466a;" required><span id="togglePasswordSingIn"><i style="margin-left: -32px;" class="fa-solid fa-lock"></i> </span>
+                            <input type="password" class="password" id="passwordLogin" name="passwordLogin"
+                                placeholder="Ingrese su contraseña aquí" style="border:1px solid #46466a;"
+                                required><span id="togglePasswordSingIn"><i style="margin-left: -32px;" id="iconLock"
+                                    class="fa-solid fa-lock"></i> </span>
                         </div>
-                        <div class="alert alert-info mt-2" role="alert" style="padding: 3px; font-size: 13px;">
+                        <div class="alert alert-dark mt-2" role="alert" style="padding: 3px; font-size: 13px;">
                             <p><i class="fa-solid fa-circle-exclamation"></i> Olvidaste tu contraseña
                                 <br>
                                 Haga click <a href="">aquí</a> para recuperarla
@@ -169,13 +178,11 @@
                         <input type="submit" value="Ingresar">
                         <hr>
                         <div class="wrapper-google-facebook">
-                            <button
-                            style="border:none;padding:5px;background-color: #EA4335;color: white;border-radius: 10px;"><i
-                                class="fa-brands fa-google-plus"></i> Registrarse con Google</button>
-                        <button
-                            style="border:none;padding:5px;background-color: #1877F2;color: white;border-radius: 10px;"><i
-                                class="fa-brands fa-facebook"></i> Registrarse con Facebook</button>
-    
+                            <button class="btnGoogle"><i class="fa-brands fa-google-plus"></i> Continuar
+                                conGoogle</button>
+                            <button class="btnMeta"><i class="fa-brands fa-facebook"></i> Continuar con
+                                Facebook</button>
+
                         </div>
                     </form>
                 </div>
@@ -194,8 +201,10 @@
                     ayudar. Juntos, podemos hacer una diferencia en la vida de estos magníficos animales.</p>
 
 
-                <p>Puedes realizar donaciones para apoyar nuestra misión a través de varias plataformas: Mercado Pago,
-                    Banco Nación y Banco Provincia. Aceptamos pagos con tarjetas Visa y MasterCard . Cada contribución,
+                <p>Puedes realizar donaciones para apoyar nuestra misión a través de varias plataformas: <b>Mercado
+                        Pago,
+                        Banco Nación y Banco Provincia</b>. Aceptamos pagos con tarjetas <b> Visa y MasterCard </b>.
+                    Cada contribución,
                     grande o pequeña, ayuda a proporcionar el cuidado y la atención que nuestros caballos rescatados
                     necesitan."
                 </p>
@@ -203,7 +212,7 @@
         </div>
         <div class="form-register">
             <form class="form" id="formRegister">
-                <h2 style="width: 100%;text-align: center;">Registro</h2>
+                <h2>Registro</h2>
                 <div class="wrapper-name-lastname">
                     <div class="name">
                         <label for="nombre">Nombre:</label><br>
@@ -231,48 +240,49 @@
 
                         <input class="password" style="border:1px solid #46466a;" type="password" id="passwordSingUp"
                             name="passwordSingUp" placeholder="Ingrese su contraseña aquí" required><span
-                            class="togglePasswordRegister" style="cursor: pointer;" ><i style="margin-left: -32px;" class="fa-solid fa-lock iconLock"></i>
+                            class="togglePasswordRegister" style="cursor: pointer;"><i style="margin-left: -32px;"
+                                class="fa-solid fa-lock iconLock"></i>
                         </span>
                     </div>
                 </div>
                 <div class="password-info">
                     <div id="length"><i class="fas fa-check iconLength"></i> Al menos 8 caracteres</div>
                     <div id="uppercase"><i class="fas fa-check iconUppercase"></i> Al menos una mayúscula</div>
-                    <div id="special-char"><i class="fas fa-check iconSpecialChar"></i> Al menos un carácter especial
-                    </div>
+                    <div id="special-char"><i class="fas fa-check iconSpecialChar"></i> Al menos un carácter especial</div>
                     <div id="number"><i class="fas fa-check iconNumber"></i> Al menos un número</div>
-                </div><br>
+                </div>
+                <br>
 
                 <div class="wrapper-password">
 
                     <label for="password">Repetir contraseña:</label>
                     <div style="border-radius:10px; display: flex;background-color: white;align-items: center;">
 
-                        <input class="password" type="password" id="repeatPasswordSingUp" name="repeatPasswordSingUp" placeholder="Repita su contraseña " required><span style="cursor: pointer;" class="togglePasswordRegister"><i style="margin-left: -32px;" class="fa-solid fa-lock iconLock"></i> </span>
+                        <input class="password" type="password" id="repeatPasswordSingUp" name="repeatPasswordSingUp"
+                            placeholder="Repita su contraseña " required><span style="cursor: pointer;"
+                            class="togglePasswordRegister"><i style="margin-left: -32px;"
+                                class="fa-solid fa-lock iconLock"></i> </span>
                     </div>
-                    <div class="password-info">
-                        <div id="passwordMatch"><i class="fas fa-check" id="iconPasswordMatch" style="margin-top: 10px;"></i> Coinciden las contraseñas</div>
+                    <div class="matchPassword">
+                        <div id="passwordMatch"><i class="fas fa-check" id="iconPasswordMatch"
+                                style="margin-top: 10px;"></i> Coinciden las contraseñas</div>
 
                     </div>
                 </div>
-                <div style="display: flex;align-items: center;">
-                    <input style="width: 20px;" type="checkbox" name="">&nbsp; Estoy de acuerdo con los terminos y
-                    condiciones
+                <div class="conditionsAndTermins">
+                    <input style="width: 20px;" type="checkbox" name="">&nbsp;  <p>Estoy de acuerdo con los terminos y
+                    condiciones</p>
                 </div>
                 <br>
 
-                <input type="submit" value="Registrarse">
+                <input class="submitRegister" type="submit" value="Registrarse">
                 <hr>
                 <div style="display: flex;flex-direction: column;gap: 10px;">
-                    <button
-                        style="border:none;padding:5px;background-color: #EA4335;color: white;border-radius: 10px;"><i
-                            class="fa-brands fa-google-plus"></i> Registrarse con Google</button>
-                    <button
-                        style="border:none;padding:5px;background-color: #1877F2;color: white;border-radius: 10px;"><i
-                            class="fa-brands fa-facebook"></i> Registrarse con Facebook</button>
+                    <button class="btnGoogle"><i class="fa-brands fa-google-plus"></i> Registrarse con Google</button>
+                    <button class="btnMeta"><i class="fa-brands fa-facebook"></i> Registrarse con Facebook</button>
 
                 </div>
-                
+
             </form>
         </div>
     </div>

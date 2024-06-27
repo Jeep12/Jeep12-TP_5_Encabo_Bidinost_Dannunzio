@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+
+    <link rel="icon" type="image/x-icon" href="images/icopestaña.ico">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="utils/slick/slick-theme.css" />
@@ -11,7 +14,7 @@
     <link rel="stylesheet" href="utils/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title></title>
+    <title>Equus</title>
 </head>
 
 <body>
@@ -20,7 +23,7 @@
 
             <div class="social">
                 <div class="logo">
-                    
+
                     <img src="images/logo.png" alt="" srcset="">
                 </div>
                 <div class="networks">
@@ -136,31 +139,34 @@
         </div>
     </div>
 
+  
     <!-- MODAL INICIAR SESION -->
     <div class="modal modalSingIn fade" id="singIn" tabindex="-1" aria-labelledby="singInModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="singInModalLabel">INGRESAR</h1>
+                 
+                    
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
 
                     <form id="formLogin">
 
-                        <label for="">Ingrese su email</label>
+                        <label for="">Email:</label>
                         <input type="email" id="emailLogin" name="emailLogin" class="password"
                             placeholder="Ingrese su email aquí">
 
-                        <label for="">Ingrese su contraña</label>
+                        <label for="">Contraseña:</label>
                         <div style="border-radius:10px; display: flex;background-color: white;align-items: center;">
 
                             <input type="password" class="password" id="passwordLogin" name="passwordLogin"
                                 placeholder="Ingrese su contraseña aquí" style="border:1px solid #46466a;"
-                                required><span id="togglePasswordSingIn"><i style="margin-left: -32px;"
-                                    id="iconLock" class="fa-solid fa-lock"></i> </span>
+                                required><span id="togglePasswordSingIn"><i style="margin-left: -32px;" id="iconLock"
+                                    class="fa-solid fa-lock"></i> </span>
                         </div>
-                        <div class="alert alert-info mt-2" role="alert" style="padding: 3px; font-size: 13px;">
+                        <div class="alert alert-dark mt-2" role="alert" style="padding: 3px; font-size: 13px;">
                             <p><i class="fa-solid fa-circle-exclamation"></i> Olvidaste tu contraseña
                                 <br>
                                 Haga click <a href="">aquí</a> para recuperarla
@@ -173,12 +179,8 @@
                         <input type="submit" value="Ingresar">
                         <hr>
                         <div class="wrapper-google-facebook">
-                            <button
-                                style="border:none;padding:5px;background-color: #EA4335;color: white;border-radius: 10px;"><i
-                                    class="fa-brands fa-google-plus"></i> Continuar con Google</button>
-                            <button
-                                style="border:none;padding:5px;background-color: #1877F2;color: white;border-radius: 10px;"><i
-                                    class="fa-brands fa-facebook"></i> Continuar con Facebook</button>
+                            <button class="btnGoogle"><i class="fa-brands fa-google-plus"></i> Continuar conGoogle</button>
+                            <button class="btnMeta"><i class="fa-brands fa-facebook"></i> Continuar con Facebook</button>
 
                         </div>
                     </form>
@@ -191,7 +193,7 @@
 
 
     <div>
-        INICIO
+        NUESTROS ANIMALES
     </div>
 
 

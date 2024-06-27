@@ -4,35 +4,51 @@
     display: flex;
     flex-direction: row;
     height: 100vh;
+    gap: 10px;
 
 }
 
-.info-register{
+.info-register {
     background-color: #46466A80;
     height: 100%;
     display: flex;
     flex-direction: column;
-    
 
 }
-.info-register p, .info-register h2{
-    width: 100%;
-    font-family: 'Helvetica';
+
+.info-register p {
+    background-color: #46466a18;
+
+}
+
+.info-register p,
+.info-register h2 {
+    width: 80%;
     color: white;
     margin-top: 50px;
     text-align: start;
-    text-align: center;
+    margin: 25px auto;
+    font-family: 'Helvetica';
+
+}
+
+.info-register p::first-letter {
+    font-size: 19px;
 }
 
 .wrapper-img {
+    position: relative;
     width: 50%;
-    background: url('../images/registerimg.jpg') no-repeat;
-    background-size: cover;
     height: 100%;
+    background: url('../images/registerimg.jpg') no-repeat center center;
+    background-size: cover;
     animation-name: slideInLeft;
     animation-duration: 1s;
     animation-fill-mode: both;
 }
+
+
+
 
 .form-register {
     width: 50%;
@@ -42,44 +58,73 @@
     display: flex;
     justify-content: center;
 }
+
+.form-register form h2 {
+    width: 100%;
+    font-family: 'Helvetica Compressed';
+    letter-spacing: 2px;
+    color: #46466a;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 .wrapper-name-lastname .name {
     padding: 10px;
 }
+
 .wrapper-name-lastname .last-name {
     padding: 10px;
 }
+
 .wrapper-name-lastname {
     display: flex;
 }
+
 .wrapper-password {
-    padding: 10px ;
+    padding: 10px;
 }
+
 .wrapper-name-lastname div {
     width: 50%;
 }
+
 .form-register form {
+    margin-top: 10px;
     width: 80%;
 }
-.form-register form input  {
+
+.form-register form input {
     width: 100%;
     height: 37px;
     border-radius: 10px;
     border: 1px solid #46466a;
 
 }
-.form-register form input::placeholder{
+
+.form-register form i {
+    color: #46466A;
+}
+
+.form-register form input::placeholder {
     font-family: 'Helvetica';
     text-align: center;
+    color: #46466a;
 }
+
 .form-register label {
     color: black;
     text-align: center;
     width: 100%;
-    font-family: 'Helvetica';
+    font-family: 'Helvetica Compressed';
+    letter-spacing: 2px;
+    color: #46466a;
+    text-transform: uppercase;
 }
+
 .form-register form {
     padding: 5px;
 }
+
 .form-register input[type="submit"] {
     border: none;
     background-color: #46466a;
@@ -88,35 +133,106 @@
 .wrapper-email {
     padding: 10px;
 }
+
 .password-info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 10px;
-    margin-top: 5px;
-    margin-left: 20px;
+    align-items: center;
+    justify-content: end;
     text-align: start;
+    width: 90%;
+    margin: auto;
+}
+
+
+.submitRegister {
+    color: #9B8BF4;
+    font-family: 'Helvetica';
+
+}
+
+.submitRegister:hover {
+    background-color: #9B8BF4 !important;
+    box-shadow: inset 0 0 10px #ffffff;
+    color: #46466A;
+}
+
+.matchPassword {
+    width: 100% !important;
+}
+.matchPassword div {
+}
+.matchPassword div i {
+    background-color: #ccc;
+    border: 1px solid gray;
+    color: gray;
+}
+.iconPasswordMatch{
+}
+
+.conditionsAndTermins {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 90%;
+    margin-left: 10px;
+    
+}
+.conditionsAndTermins p {
+    margin-top: 6px;
+}
+@media (max-width: 1370px) {
+    .info-register h2 {
+        font-size: 18px;
     }
+
+    .info-register p {
+        font-size: 15px;
+    }
+
+    .password-info {
+        font-size: 14px;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px !important;
+
+    }
+
+}
+
 @media (max-width: 991px) {
+    .form-register form input::placeholder {
+        font-size: 13px;
+    }
+    .conditionsAndTermins {
+        font-size: 14px;
+    }
+
     .wrapper-register {
         flex-direction: column;
         width: 100%;
-   
+
     }
 
     .wrapper-img {
         width: 100%;
-        background-size: ccover;
+        background-size: cover;
+        display: none;
     }
 
     .form-register {
         width: 100%;
-   
+
     }
 
     .form-register form {
         width: 100%;
+    }
+    .password-info {
+        width: 95%;
+        font-size: 12px;
     }
 
 

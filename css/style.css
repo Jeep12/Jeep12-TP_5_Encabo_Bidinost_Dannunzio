@@ -8,7 +8,34 @@
     padding: 0;
     margin: 0;
 }
+.btnGoogle i,.btnMeta i {
+    color: white  !important;
+}
+.btnGoogle {
+    background-color: #EA4335;
+    color: white;
+    font-family: 'Helvetica';
+    border-radius: 10px;
+    border:none;
+    padding: 3px;
 
+}
+.btnMeta {
+    background-color:  #1877F2;
+    color: white;
+    font-family: 'Helvetica';
+    border-radius: 10px;
+    padding: 3px;
+    border: none;
+}
+.btnGoogle:hover {
+    background-color: #EA4335;
+    box-shadow: inset 0 0 10px #d2948e; 
+}
+.btnMeta:hover {
+    background-color:  #1f62ba;
+    box-shadow: inset 0 0 10px #4d78b1;
+}
 @font-face {
     font-family: 'Helvetica';
     font-style: normal;

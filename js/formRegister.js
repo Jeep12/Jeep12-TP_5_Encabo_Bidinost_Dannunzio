@@ -1,5 +1,26 @@
 
 function register() {
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const wrapperImg = document.querySelector('.wrapper-img');
+    
+        wrapperImg.addEventListener('mousemove', function (e) {
+            const rect = wrapperImg.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+    
+            const moveX = (x / rect.width) * 100;
+            const moveY = (y / rect.height) * 100;
+    
+            wrapperImg.style.backgroundPosition = `${moveX}% ${moveY}%`;
+        });
+    
+        wrapperImg.addEventListener('mouseleave', function () {
+            wrapperImg.style.backgroundPosition = 'center';
+        });
+    });
+    
+
     const validColor = "green";
     const invalidColor = "gray";
     const validBackground = "white";
