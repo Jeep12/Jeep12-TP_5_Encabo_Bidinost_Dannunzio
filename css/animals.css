@@ -1,0 +1,93 @@
+
+.card-group{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    scrollbar-gutter: auto;
+}
+
+.card-img-top {
+    width: 60vw;
+    object-fit: contain;
+}
+
+.card{
+    margin:1vw;
+
+}
+
+.card-body{
+    width: 30%;
+}
+#searchForm p{
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size:1.2rem;
+}
+
+#searchForm {
+    margin: 2vh;
+}
+#searchBtn{
+    padding: 7px;
+    background-color: var(--third-color);
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    width: fit-content;
+    font-family: 'Helvetica Bold Oblique';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+}
+#searchBtn:hover{
+        background-color: #9B8BF4;
+        box-shadow: inset 0 0 10px #ffffff;
+        color: #46466A;
+}
+#searchForm .form-control{
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #46466a;
+}
+#searchForm input{
+    border: 1px solid #46466a;
+}
+.wrapper-search{
+    display: flex;
+    flex-direction: row;
+    padding:0.5rem;
+    justify-content: space-around;
+    font-size:1.2rem;
+}
+.wrapper-search .form-group{
+    padding:0.5rem;
+}
+.form-check-input, .radio-input{
+    margin-right: 1rem;
+}
+
+.checkboxes,.radio{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 1000px) {
+    .card-img-top {
+        width: 30vw;
+        object-fit: contain;
+    }
+    .card{
+        width: 47.5%;
+    }
+
+    .card-deck{
+        display:flex;
+        flex-wrap: wrap;
+    }
+
+    .wrapper-search{
+        justify-content:flex-start;
+    }
+}

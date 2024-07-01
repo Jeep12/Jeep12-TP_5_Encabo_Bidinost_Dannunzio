@@ -92,3 +92,7 @@
 .deleteElement {
     display: none !important;
 }
+
+.helvetica{
+    font-family: 'Helvetica';
+}
