@@ -40,10 +40,11 @@
 
 }
 
-
 .navigation {
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 40;
     padding: 0px;
 }
 
@@ -174,7 +175,7 @@
 }
 
 .navbar {
-    background: #46466A !important;
+    background: #46466ab8 !important;
     padding: 0px !important;
 }
 
