@@ -1,9 +1,13 @@
 
  .inicio {
-    position: relative; /* Asegura que los elementos dentro de .inicio se posicionen correctamente */
-  }
-  
-  /* Estilo para la imagen de inicio */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 0;
+    }
   .imgHome-1 {
     width: 100%;
     height: 110%;
@@ -17,7 +21,59 @@
     left: 0;
     width: 100%;
     height: 110%;
-    background-color:#46466a7c;
+    background-color:#30304e7c;
     ; 
   }
+  h1,h2,h3,p{
+    color: white;
+  }
+  .article-1 {
+    display: flex;
+    justify-content: space-between;
+
+  }
+  article{
+    background-color: #46466a7c;
+    border-radius: 8px;
+    margin-left: 20px;
+  }
+  article > *{
+    text-align: left;
+  }
+  article > h1{
+    font-size: 50pt;
+    color:#ffffff;
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 255, 255);
+  }
+  .textArt-1{
+    margin-top: 5%;
+  }
+  article > h2{
+    font-size: 30pt;
+  }
+  section > *{
+    text-align: right;
+    padding-right:10px;
+  }
+
+  article, section {
+    flex: 1;
+    padding: 20px;
+    margin-bottom: 200px;
+  }
+
+  .helpUs {
+    font-size: 20px;
+    padding: 20px 150px;
+    background-color: #46466a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow:10px 10px 5px #00000053 ;
+  }
   
+  .helpUs:hover {
+    background-color:#6f65aa ;
+  }
