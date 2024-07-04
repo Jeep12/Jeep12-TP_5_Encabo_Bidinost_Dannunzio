@@ -1,46 +1,51 @@
+.inicio{
+  display: grid;
+  grid-template-areas:
+      ". article-1 ."
+      ". article-2 .";
+  grid-template-columns: 1fr 1fr 1fr; 
+   height: 100vh;
+}
+ .article-1 {
+  grid-area: article-1;
+  background-image: url("../images/caballoReabHome.jpg");
+  background-repeat: no-repeat;
+  grid-column: 1 / span 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* define el grid en 8*/
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 40px; /* Espacio entre celdas */
+ }
+ .art-1{
+  grid-column: 1 / span 4; /*ocupa la primera fila 2 espacios del grid*/
+  grid-row: 2 / span 1;
+ }
+ .sect-1{
+  grid-column-start: 6;
+  grid-column-end: 8;
+  grid-row: 2 / span 1;
+  background-color: #46466a9c;
+  border-radius: 8px;
+  margin-left: 20px;
 
- .inicio {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    padding-top: 0;
-    }
-  .imgHome-1 {
-    width: 100%;
-    height: 110%;
-    position: absolute;
-    top: 0;
-    z-index: -2; 
-  }
-  .blueFilter{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 110%;
-    background-color:#30304e7c;
-    ; 
-  }
+ }
+ .helpUs {
+  grid-column: 4 / span 2; /* Desde la cuarta columna y abarca dos columnas */
+  grid-row: -2; /* En la última fila del grid */
+  margin-bottom: 20px;
+}
   h1,h2,h3,p{
     color: white;
   }
-  .article-1 {
-    display: flex;
-    justify-content: space-between;
-
-  }
-  article{
+  .art-1{
     background-color: #46466a7c;
     border-radius: 8px;
     margin-left: 20px;
   }
-  article > *{
+  .art-1 > *{
     text-align: left;
   }
-  article > h1{
+  .art-1 > h1{
     font-size: 50pt;
     color:#ffffff;
     text-decoration: underline;
@@ -49,26 +54,26 @@
   .textArt-1{
     margin-top: 5%;
   }
-  article > h2{
+  .art-1 > h2{
     font-size: 30pt;
   }
-  section > *{
-    text-align: right;
-    padding-right:10px;
+  .sect-1 > *{
+    text-align: center;
   }
-
-  article, section {
+  .sect-1 > h3{
+    padding-bottom: 40px;
+  }
+  .art-1, .sect-1 {
     flex: 1;
     padding: 20px;
     margin-bottom: 100px;
   }
 
   .helpUs {
-    font-size: 20px;
-    padding: 20px 150px;
-    background-color: #46466a;
-    color: white;
-    border: none;
+    font-size: 30px;
+    background-color: #F194B8;
+    color: rgb(0, 0, 0);
+    border-color:#F194B8;
     border-radius: 5px;
     cursor: pointer;
     box-shadow:10px 10px 5px #00000053 ;
@@ -76,4 +81,8 @@
   
   .helpUs:hover {
     background-color:#6f65aa ;
+    border-color: #6f65aa;
   }
+  .article-2 {
+    grid-area: article-2;
+}
