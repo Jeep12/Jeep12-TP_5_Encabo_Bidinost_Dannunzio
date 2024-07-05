@@ -11,15 +11,21 @@
 }
 
 footer{
-    margin-top: 50px;
+    margin-top: 200px;
 }
 
 .footer-links{
     padding-right: 5vw;
 }
-
+.footer-links ul li {
+    font-family: 'Helvetica';
+    text-transform: uppercase;
+    font-size: 15px;
+    text-align: left;
+}
 footer > *{
     color: white !important;
+    font-size: 17px;
 }
 footer a{
     text-decoration: none;
