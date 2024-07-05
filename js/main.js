@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 $('.slider1').slick({
     draggable: true,
-    arrows: true,
+    arrows: false,
     dots: false,
     fade: true,
     speed: 4000,
@@ -87,7 +87,7 @@ const titleArt2 = document.querySelector("#titleArt2");
 const parrafosArt2 = document.querySelectorAll(".animationLeft");
 
 // Selecciona el último elemento <li> dentro de .art2Right
-const lastLi = document.querySelector(".art2Right ul li:last-child");
+const lastLi = document.querySelector(".art2Right ul li:nth-child(2)");
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -117,5 +117,6 @@ elementsToObserve.forEach((element) => {
 
 $('.slider2').slick({
     autoplay: true,
+    arrows: false,
 
 })

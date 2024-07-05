@@ -12,6 +12,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 
     /* Oculta la barra de desplazamiento horizontal */
 
@@ -19,7 +20,6 @@
 
 body {
     overflow-x: hidden;
-
 }
 
 .btnGoogle i,
