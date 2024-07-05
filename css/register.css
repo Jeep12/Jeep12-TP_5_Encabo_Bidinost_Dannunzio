@@ -164,6 +164,11 @@
     width: 100% !important;
 }
 .matchPassword div {
+    display: flex;
+    align-items: flex-end;
+}
+.matchPassword span {
+    padding-left: 0.5 em;
 }
 .matchPassword div i {
     background-color: #ccc;
@@ -181,6 +186,7 @@
     margin-left: 10px;
     
 }
+
 .conditionsAndTermins p {
     margin-top: 6px;
 }

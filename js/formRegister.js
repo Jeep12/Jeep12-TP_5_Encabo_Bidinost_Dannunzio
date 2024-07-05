@@ -20,22 +20,27 @@ document.addEventListener('DOMContentLoaded', function () {
     //Iconos candados
     let icons = document.querySelectorAll(".iconLock");
 
+    function checkPasswordMatch(){
+        let confirmPassword = confirmPasswordRegister.value;
+        let iconPasswordMatch = document.getElementById("iconPasswordMatch");
+        const passwordMatchText = document.querySelector('#passwordMatchText');
+
+        if (confirmPassword == passwordValue) {
+            updateIconStyle(borderWidth, iconPasswordMatch, validColor, validBackground);
+            passwordMatchText.innerHTML = "Las contraseñas coinciden";
+            iconPasswordMatch.classList.add("fa-check");
+            iconPasswordMatch.classList.remove("fa-times");
+        } else {
+            updateIconStyle(borderWidth, iconPasswordMatch, invalidColor, invalidBackground);
+            passwordMatchText.innerHTML = "Las contraseñas no coinciden";
+            iconPasswordMatch.classList.remove("fa-check");
+            iconPasswordMatch.classList.add("fa-times");
+        }
+
+    }
     if (confirmPasswordRegister) {
 
-        confirmPasswordRegister.addEventListener("input", () => {
-            let confirmPassword = confirmPasswordRegister.value;
-            let iconPasswordMatch = document.getElementById("iconPasswordMatch");
-            const passwordMatchDiv = document.querySelector('#passwordMatch');
-
-            if (confirmPassword == passwordValue) {
-                updateIconStyle(borderWidth, iconPasswordMatch, validColor, validBackground);
-            } else {
-                updateIconStyle(borderWidth, iconPasswordMatch, invalidColor, invalidBackground);
-
-            }
-
-        })
-
+        confirmPasswordRegister.addEventListener("input", checkPasswordMatch);
     }
     //levanto form con FormData
 
@@ -54,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const password = formData.get('passwordSingUp');
             const repeatPassword = formData.get('repeatPasswordSingUp');
 
-            if (repeatPassword == passwordValue) {
+            if (repeatPassword == passwordValue && validatePassword()) {
                 const data = {
                     name: name,
                     lastName: lastName,
@@ -111,64 +116,77 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+    
+    const lengthDiv = document.querySelector('#length');
+    const uppercaseDiv = document.querySelector('#uppercase');
+    const specialCharDiv = document.querySelector('#special-char');
+    const numberDiv = document.querySelector('#number');
+    
+    let iconLength = document.querySelector('.iconLength');
+    let iconUppercase = document.querySelector('.iconUppercase');
+    let iconSpecialChar = document.querySelector('.iconSpecialChar');
+    let iconNumber = document.querySelector('.iconNumber');
+    let inputPassword = document.getElementById("passwordSingUp");
     checkPassword();
 
     function checkPassword() {
-
-
-        const lengthDiv = document.querySelector('#length');
-        const uppercaseDiv = document.querySelector('#uppercase');
-        const specialCharDiv = document.querySelector('#special-char');
-        const numberDiv = document.querySelector('#number');
-
-        let iconLength = document.querySelector('.iconLength');
-        let iconUppercase = document.querySelector('.iconUppercase');
-        let iconSpecialChar = document.querySelector('.iconSpecialChar');
-        let iconNumber = document.querySelector('.iconNumber');
-
-
-
-        let inputPassword = document.getElementById("passwordSingUp");
         if (inputPassword) {
             inputPassword.addEventListener("input", validatePassword);
-
-            function validatePassword() {
-                let password = inputPassword.value;
-                passwordValue = inputPassword.value;
-                let isValid = true;
-
-                if (hasLength(password)) {
-                    updateIconStyle(borderWidth, iconLength, validColor, validBackground);
-                } else {
-                    updateIconStyle(borderWidth, iconLength, invalidColor, invalidBackground);
-                    isValid = false;
-                }
-
-                if (hasUppercase(password)) {
-                    updateIconStyle(borderWidth, iconUppercase, validColor, validBackground);
-                } else {
-                    updateIconStyle(borderWidth, iconUppercase, invalidColor, invalidBackground);
-                    isValid = false;
-                }
-
-                if (hasSpecialChar(password)) {
-                    updateIconStyle(borderWidth, iconSpecialChar, validColor, validBackground);
-                } else {
-                    updateIconStyle(borderWidth, iconSpecialChar, invalidColor, invalidBackground);
-                    isValid = false;
-                }
-
-                if (hasNumber(password)) {
-                    updateIconStyle(borderWidth, iconNumber, validColor, validBackground);
-                } else {
-                    updateIconStyle(borderWidth, iconNumber, invalidColor, invalidBackground);
-                    isValid = false;
-                }
-
-                return isValid;
-            }
-
+            validatePassword();            
         }
+    }
+
+    function validatePassword() {
+        let password = inputPassword.value;
+        passwordValue = inputPassword.value;
+        let isValid = true;
+        checkPasswordMatch();
+
+        if (hasLength(password)) {
+            updateIconStyle(borderWidth, iconLength, validColor, validBackground);
+            iconLength.classList.add("fa-check");
+            iconLength.classList.remove("fa-times");
+        } else {
+            updateIconStyle(borderWidth, iconLength, invalidColor, invalidBackground);
+            isValid = false;
+            iconLength.classList.remove("fa-check");
+            iconLength.classList.add("fa-times");
+        }
+
+        if (hasUppercase(password)) {
+            updateIconStyle(borderWidth, iconUppercase, validColor, validBackground);
+            iconUppercase.classList.add("fa-check");
+            iconUppercase.classList.remove("fa-times");
+        } else {
+            updateIconStyle(borderWidth, iconUppercase, invalidColor, invalidBackground);
+            isValid = false;
+            iconUppercase.classList.remove("fa-check");
+            iconUppercase.classList.add("fa-times");
+        }
+
+        if (hasSpecialChar(password)) {
+            updateIconStyle(borderWidth, iconSpecialChar, validColor, validBackground);
+            iconSpecialChar.classList.add("fa-check");
+            iconSpecialChar.classList.remove("fa-times");
+        } else {
+            updateIconStyle(borderWidth, iconSpecialChar, invalidColor, invalidBackground);
+            isValid = false;
+            iconSpecialChar.classList.remove("fa-check");
+            iconSpecialChar.classList.add("fa-times");
+        }
+
+        if (hasNumber(password)) {
+            updateIconStyle(borderWidth, iconNumber, validColor, validBackground);
+            iconNumber.classList.add("fa-check");
+            iconNumber.classList.remove("fa-times");
+        } else {
+            updateIconStyle(borderWidth, iconNumber, invalidColor, invalidBackground);
+            isValid = false;
+            iconNumber.classList.remove("fa-check");
+            iconNumber.classList.add("fa-times");
+        }
+
+        return isValid;
     }
 
     function updateIconStyle(borderWidth, icon, color, background) {
