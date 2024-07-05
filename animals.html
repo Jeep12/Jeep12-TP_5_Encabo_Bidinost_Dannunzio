@@ -193,7 +193,7 @@
 
 
 
-    <div class="helvetica">
+    <div class="helvetica containerSearchForm">
         <form id="searchForm" action="">
             <div class="wrapper-search">
                 <div class="form-group">
@@ -206,49 +206,51 @@
                     <input class="form-control" type="number" name="age" id="inputAge">
                 </div>
             </div>
-
-            <p>Colores</p>
-            <div class="form-group checkboxes">
-                <div>
-                    <label class="form-check-label" for="inputColorNegro">Negro</label>
-                    <input class="form-check-input" type="checkbox" name="color" id="inputColorNegro" value="negro">
-                </div>
-                <div>
-                    <label class="form-check-label" for="inputColorBlanco">Blanco</label>
-                    <input class="form-check-input" type="checkbox" name="color" id="inputColorBlanco" value="blanco">
-                </div>
-
-                <div>
-                    <label class="form-check-label" for="inputColorGris">Gris</label>
-                    <input class="form-check-input" type="checkbox" name="color" id="inputColorGris" value="gris">
-                </div>
-
-                <div>
-                    <label class="form-check-label" for="inputColorCastanio">Castaño</label>
-                    <input class="form-check-input" type="checkbox" name="color" id="inputColorCastanio" value="castaño">
-
-                </div>
-                <div>
-                    <label class="form-check-label" for="inputColorRojizo">Rojizo</label>
-                    <input class="form-check-input" type="checkbox" name="color" id="inputColorRojizo" value="rojizo">
+            <div>
+                <p>Colores</p>
+                <div class="form-group checkboxes">
+                    <div>
+                        <label class="form-check-label" for="inputColorNegro">Negro</label>
+                        <input class="form-check-input" type="checkbox" name="color" id="inputColorNegro" value="negro">
+                    </div>
+                    <div>
+                        <label class="form-check-label" for="inputColorBlanco">Blanco</label>
+                        <input class="form-check-input" type="checkbox" name="color" id="inputColorBlanco" value="blanco">
+                    </div>
+    
+                    <div>
+                        <label class="form-check-label" for="inputColorGris">Gris</label>
+                        <input class="form-check-input" type="checkbox" name="color" id="inputColorGris" value="gris">
+                    </div>
+    
+                    <div>
+                        <label class="form-check-label" for="inputColorCastanio">Castaño</label>
+                        <input class="form-check-input" type="checkbox" name="color" id="inputColorCastanio" value="castaño">
+    
+                    </div>
+                    <div>
+                        <label class="form-check-label" for="inputColorRojizo">Rojizo</label>
+                        <input class="form-check-input" type="checkbox" name="color" id="inputColorRojizo" value="rojizo">
+                    </div>
                 </div>
             </div>
 
             
-
-            <p class="section-title">Sexo</p>
-            <div class="form-group radio">
-                <div>
-                    <label for="inputSexFemale">Cualquiera</label>
-                    <input class="radio-input" type="radio" name="sex" id="inputSexAny" value="" checked>
-                </div>
-                <div>
-                    <label for="inputSexMale">Macho</label>
-                    <input class="radio-input" type="radio" name="sex" id="inputSexMale" value="macho">
-                </div>
-                <div>
-                    <label for="inputSexFemale">Hembra</label>
-                    <input class="radio-input" type="radio" name="sex" id="inputSexFemale" value="hembra">
+            <div>
+                <p class="section-title">Sexo</p>
+                <div class="form-group radio">
+                    <div>
+                        <label for="inputSexFemale">Cualquiera</label>
+                        <input class="radio-input" type="radio" name="sex" id="inputSexAny" value="" checked>
+                    </div>
+                    <div>
+                        <label for="inputSexMale">Macho</label>
+                        <input class="radio-input" type="radio" name="sex" id="inputSexMale" value="macho">
+                    </div>
+                    <div>
+                        <label for="inputSexFemale">Hembra</label>
+                        <input class="radio-input" type="radio" name="sex" id="inputSexFemale" value="hembra">
+                    </div>
                 </div>
             </div>
 
@@ -256,32 +258,8 @@
         </form>
     </div>
     <div id="card-deck" class="helvetica card-deck">
-        <div class="card flex-row">
-          <img class="card-img-top" src="images/caballo1.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Nombre</h5>
-            <p class="card-text">Sexo: masculino</p>
-            <p class="card-text">Edad: 15 años</p>
-            <p class="card-text">Colores: negro y blanco</p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-      </div>
+        
+    </div>
       <footer>
         <div class="footer-fadeout"></div>
         <div class="footer-content">
@@ -320,7 +298,7 @@
     </footer>
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-      <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     
     <script src="js/search.js"></script>
     <script src="utils/bootstrap/js/bootstrap.bundle.min.js"></script>

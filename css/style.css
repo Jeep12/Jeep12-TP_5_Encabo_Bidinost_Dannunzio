@@ -118,6 +118,22 @@ body {
     font-family: 'Helvetica';
 }
 
+#formReport .form-group{
+    padding: 0.5rem;
+}
+
+.direccion{
+    display: flex;
+    flex-direction: row;
+}
+.calle{
+    width: 70%;
+}
+
+.altura{
+    width: 30%;
+}
+
 #formReport button{
     padding: 7px;
     background-color: var(--third-color);

@@ -129,19 +129,27 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="formReport" action="">
-                        <label for="inputReportFecha">Fecha</label>
-                        <input class="form-control" type="date" name="fecha" id="inputReportFecha" required>
+                    <form id="formReport" action="" method="post">
+                        <div class="form-group">
+                            <label for="inputReportFecha">Fecha</label>
+                            <input class="form-control" type="date" name="fecha" id="inputReportFecha" required>
+                        </div>
 
-                        <label for="inputReportLocalidad">Localidad</label>
-                        <input class="form-control" type="text" name="localidad" id="inputReportLocalidad" required>
-
-                        <label for="inputReportCalle">Calle</label>
-                        <input class="form-control" type="text" name="calle" id="inputReportCalle" required>
-
-                        <label for="inputReportAltura">Altura</label>
-                        <input class="form-control" type="number" name="altura" id="inputReportAltura" required>
-                        
+                        <div class="form-group">
+                            <label for="inputReportLocalidad">Localidad</label>
+                            <input class="form-control" type="text" name="localidad" id="inputReportLocalidad" required>
+                        </div>
+                        <div class="direccion">
+                            <div class="form-group calle">
+                                <label for="inputReportCalle">Calle</label>
+                                <input class="form-control" type="text" name="calle" id="inputReportCalle" required>
+                            </div>
+    
+                            <div class="form-group altura">
+                                <label for="inputReportAltura">Altura</label>
+                                <input class="form-control" type="number" name="altura" id="inputReportAltura" required>
+                            </div>
+                        </div>
                         <button>Enviar Reporte</button>
                     </form>
                 </div>

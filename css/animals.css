@@ -25,9 +25,17 @@
 }
 
 #searchForm {
+    display: flex;
+    flex-direction: column;
     margin: 2vh;
 }
+.containerSearchForm{
+    display: flex;
+    justify-content: center;
+}
 #searchBtn{
+    align-self: center;
+    margin-top: 10px;
     padding: 7px;
     background-color: var(--third-color);
     border-radius: 10px;
@@ -35,7 +43,7 @@
     color: white;
     text-align: center;
     width: fit-content;
-    font-family: 'Helvetica Bold Oblique';
+    font-family: 'Helvetica';
     letter-spacing: 1px;
     text-transform: uppercase;
     border: none;
