@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const currentUser = currentUserString ? JSON.parse(currentUserString) : null;
 
     session = currentUser ? true : false;
-
+    
     // Ajustar visibilidad de los botones  registrarse e ingresar
     let btnsSingUpSingIn = document.getElementById("wrapper-links");
     let panelUser = document.getElementById("panelUser");
@@ -128,7 +128,6 @@ elementsToObserve.forEach((element) => {
 
 $('.slider2').slick({
     autoplay: true,
-    arrows: false,
 
 })
 
