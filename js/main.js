@@ -58,11 +58,12 @@ $('.slider1').slick({
 
 //OBJETOS A LOS QUE SE LE APLICA LA ANIMACION 
 //CUANDO SE DISPARA EL OBSERVER DEL
-const article2 = document.querySelector("#article-2");
+/* const article2 = document.querySelector("#article-2");
 
 const art2Right = document.querySelector(".art2Right");
 const titleArt2 = document.querySelector("#titleArt2");
 const parrafosArt2 = document.querySelectorAll(".animationLeft");
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -78,9 +79,40 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
-observer.observe(article2);
+*/
+const article2 = document.querySelector("#article-2");
 
+const art2Right = document.querySelector(".art2Right");
+const titleArt2 = document.querySelector("#titleArt2");
+const parrafosArt2 = document.querySelectorAll(".animationLeft");
 
+// Selecciona el último elemento <li> dentro de .art2Right
+const lastLi = document.querySelector(".art2Right ul li:last-child");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            if (entry.target === lastLi) {
+                // Inicia la animación de art2Right cuando el último <li> es visible
+                art2Right.classList.add("slide-in-right");
+            }
+            if (entry.target === titleArt2) {
+                titleArt2.classList.add("slide-in-left");
+            }
+            if (Array.from(parrafosArt2).includes(entry.target)) {
+                entry.target.classList.add("slide-in-left");
+            }
+        }
+    });
+});
+
+// Selecciona todos los elementos dentro de article2 que quieres observar
+const elementsToObserve = article2.querySelectorAll(".art2Right ul li, #titleArt2, .animationLeft");
+
+// Observa cada uno de los elementos seleccionados
+elementsToObserve.forEach((element) => {
+    observer.observe(element);
+});
 
 
 $('.slider2').slick({

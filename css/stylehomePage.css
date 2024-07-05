@@ -192,6 +192,7 @@
   flex-direction: column;
 
 }
+
 .tittleEquino {
   background-color: #46466A;
   color: white;
@@ -202,33 +203,43 @@
   font-size: 45px;
   padding: 10px;
 }
+
 .wrapper-slider-art3 {
   height: 50%;
   width: 100%;
 }
+
 .slider2 {
   padding: 0px !important;
   margin-top: -10px;
-  width: 100%; /* Asegura que el slider ocupe el 100% del ancho del contenedor */
-  height: 50vh; /* Usa vh para definir la altura relativa a la vista del puerto */
-  overflow: hidden; /* Oculta cualquier contenido que se desborde */
- 
+  width: 100%;
+  /* Asegura que el slider ocupe el 100% del ancho del contenedor */
+  height: 50vh;
+  /* Usa vh para definir la altura relativa a la vista del puerto */
+  overflow: hidden;
+  /* Oculta cualquier contenido que se desborde */
+
 }
 
 .slider2 div {
-  height: 100%; /* Asegura que los elementos hijos ocupen el 100% de la altura del slider */
+  height: 100%;
+  /* Asegura que los elementos hijos ocupen el 100% de la altura del slider */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .slider2 img {
-  width: 100%; /* Ajusta el ancho de las imágenes para que ocupen el 100% del contenedor */
-  height: 100%; /* Ajusta la altura de las imágenes para que ocupen el 100% del contenedor */
-  object-fit: cover; /* Ajusta la imagen para que se muestre completamente */
+  width: 100%;
+  /* Ajusta el ancho de las imágenes para que ocupen el 100% del contenedor */
+  height: 100%;
+  /* Ajusta la altura de las imágenes para que ocupen el 100% del contenedor */
+  object-fit: cover;
+  /* Ajusta la imagen para que se muestre completamente */
   object-position: 0px 10px;
 
 }
+
 .wrapper-equino {
   display: flex;
   height: 50%;
@@ -242,22 +253,24 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
- 
-
 }
+
 .wrapper-equino div p {
   width: 400px;
   margin: auto;
 }
+
 .wrapper-equino div input {
   width: 250px;
   margin: auto;
 }
+
 .article-4 {
   height: 100vh;
   width: 100%;
   background-color: #46466A;
 }
+
 @-webkit-keyframes slideInLeft {
   0% {
     -webkit-transform: translateX(-100%);
@@ -314,12 +327,17 @@
   }
 }
 
+.art2Right {
+  opacity: 0;
+}
+
 .slide-in-left {
   -webkit-animation: slideInLeft 3s forwards;
   animation: slideInLeft 3s forwards;
 }
 
 .slide-in-right {
+  opacity: 1;
   -webkit-animation: slideInRight 3s forwards;
   animation: slideInRight 3s forwards;
 }
