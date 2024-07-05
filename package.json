@@ -1,12 +1,17 @@
+
 {
-  "name": "TP_5_Equus",
+  "name": "sass",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "node-sass": "sass -w sass/main.scss:css/style.css"
+    "transpile-sass": "sass sass/nav.scss sass/nav2.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "devDependencies": {
+    "sass": "^1.77.6"
+  }
 }
+

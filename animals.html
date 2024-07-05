@@ -126,16 +126,40 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="repotAbuseModalLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="repotAbuseModalLabel">Reportar Abuso</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <form id="formReport" action="" method="post">
+                        <div class="form-group">
+                            <label for="inputReportFecha">Fecha</label>
+                            <input class="form-control" type="date" name="fecha" id="inputReportFecha" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputReportLocalidad">Localidad</label>
+                            <input class="form-control" type="text" name="localidad" id="inputReportLocalidad" required>
+                        </div>
+                        <div class="direccion">
+                            <div class="form-group calle">
+                                <label for="inputReportCalle">Calle</label>
+                                <input class="form-control" type="text" name="calle" id="inputReportCalle" required>
+                            </div>
+    
+                            <div class="form-group altura">
+                                <label for="inputReportAltura">Altura</label>
+                                <input class="form-control" type="number" name="altura" id="inputReportAltura" required>
+                            </div>
+                        </div>
+                        <button>Enviar Reporte</button>
+                    </form>
                 </div>
+                <!--
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
+                -->
             </div>
         </div>
     </div>
