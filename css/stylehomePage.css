@@ -207,6 +207,8 @@
   width: 100%;
 }
 .slider2 {
+  padding: 0px !important;
+  margin-top: -10px;
   width: 100%; /* Asegura que el slider ocupe el 100% del ancho del contenedor */
   height: 50vh; /* Usa vh para definir la altura relativa a la vista del puerto */
   overflow: hidden; /* Oculta cualquier contenido que se desborde */
