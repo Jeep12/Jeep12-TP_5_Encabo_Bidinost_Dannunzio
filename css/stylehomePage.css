@@ -536,7 +536,6 @@
     font-size: 40px;
     margin-top: 100px;
     text-transform: uppercase;
-    font-family: 'Helvetica Compressed';
     letter-spacing: 6px;
     color: #46466A;
   }
@@ -546,7 +545,6 @@
     text-align: center;
     font-size: 15px;
     text-transform: uppercase;
-    font-family: 'Helvetica';
   }
 
 }
