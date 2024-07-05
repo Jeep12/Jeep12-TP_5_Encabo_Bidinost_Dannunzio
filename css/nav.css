@@ -21,7 +21,7 @@
     display: inline-block;
 }
 
-.social .logo img {
+ .logo img {
     width: 80px;
     transition-duration: 1s;
     border-radius: 50%;
@@ -64,7 +64,7 @@
     align-items: center;
 }
 
-.networks ul li i {
+.navigation .networks ul li i {
     color: var(--third-color);
     text-shadow: none;
 
