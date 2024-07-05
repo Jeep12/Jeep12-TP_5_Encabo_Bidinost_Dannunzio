@@ -3,7 +3,11 @@ article {
     display: flex;
     flex-direction: row;
 }
-
+h1{
+    font-family: 'Helvetica Compressed';
+    font-size: 50px;
+    color:var(--third-color);
+}
 .about {
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -13,6 +17,28 @@ article {
 .map{
     width: 100%;
     height: 100%;
+}
+.horse-slider-about {
+    width: 100%; /* Ancho completo del contenedor */
+    height: 500px; /* Altura deseada del contenedor */
+    overflow: hidden; /* Ocultar contenido que exceda la altura */
+}
+
+/* Estilos para los elementos del slider */
+.slider-About {
+    display: flex; /* Flexbox para alinear los elementos */
+    width: 300%; /* Ancho total del slider (3 imágenes × 100%) */
+    transition: transform 0.5s ease; /* Transición para animación de desplazamiento */
+}
+
+.slider-About .item {
+    flex: 0 0 33.33%; /* Tamaño de cada elemento (33.33% del ancho total) */
+}
+
+.slider-About img {
+    width: 40%; /* Imágenes ocupan el ancho completo del contenedor */
+    height: 20%; /* Imágenes ocupan la altura completa del contenedor */
+    object-fit: cover; /* Ajustar tamaño de imagen para cubrir el contenedor */
 }
 
 @keyframes slide {
