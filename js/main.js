@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const currentUser = currentUserString ? JSON.parse(currentUserString) : null;
 
     session = currentUser ? true : false;
-
+    
     // Ajustar visibilidad de los botones  registrarse e ingresar
     let btnsSingUpSingIn = document.getElementById("wrapper-links");
     let panelUser = document.getElementById("panelUser");
@@ -41,7 +41,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
 });
-
+//carrusel about
+$('.slider-About').slick({
+    draggable: true,
+    arrows: false,
+    dots: false,
+    fade: true,
+    speed: 4000,
+    infinite: true,
+    cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+    touchThreshold: 100,
+    autoplay: true
+});
 
 
 $('.slider1').slick({
@@ -54,7 +65,7 @@ $('.slider1').slick({
     cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
     touchThreshold: 100,
     autoplay: true
-})
+});
 
 //OBJETOS A LOS QUE SE LE APLICA LA ANIMACION 
 //CUANDO SE DISPARA EL OBSERVER DEL
@@ -117,6 +128,6 @@ elementsToObserve.forEach((element) => {
 
 $('.slider2').slick({
     autoplay: true,
-    arrows: false,
 
 })
+

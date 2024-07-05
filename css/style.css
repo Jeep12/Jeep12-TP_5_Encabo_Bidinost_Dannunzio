@@ -1,6 +1,7 @@
 @import url("nav.css");
 @import url("register.css");
 @import url("singin.css");
+@import url("footer.css");
 
 :root {
     --primary-color: #BDB4F9;
@@ -20,39 +21,6 @@
 
 body {
     overflow-x: hidden;
-}
-.footer-fadeout{
-    background-image: linear-gradient(white,#46466A);
-}
-.footer-content{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    background-color: #46466A;
-}
-
-footer .logo img{
-    border: 1px solid black;
-}
-
-footer .networks i{
-    color: black;
-}
-.footer-fadeout{
-    height: 10vh;
-}
-
-.footer-links ul{
-    list-style: none;
-    display: inline-block;
-    font-size: 22px;
-}
-
-footer .networks ul{
-    padding: 0px;
-    display: flex;
-    gap: 10px;
-    margin-left: 10px;
 }
 .btnGoogle i,
 .btnMeta i {
