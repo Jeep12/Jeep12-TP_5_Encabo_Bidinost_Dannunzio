@@ -2,14 +2,27 @@
     background-image: linear-gradient(white,#46466A);
 }
 .footer-content{
-    position: relative;
     display: flex;
     flex-direction: row;
     background-color: #46466A;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links{
+    padding-right: 5vw;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgb(33, 37, 41) !important;
 }
 
 footer .logo img{
     border: 1px solid black;
+}
+footer .logo, footer .networks{
+    padding-left: 5vw;
 }
 
 footer .networks i{
@@ -19,7 +32,7 @@ footer .networks i{
     height: 10vh;
 }
 
-.footer-links ul{
+footer ul{
     list-style: none;
     display: inline-block;
     font-size: 22px;
@@ -32,5 +45,14 @@ footer .networks ul{
     margin-left: 10px;
 }
 
-@media (min-width: 991px){
+.logo-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer a:hover{
+    border-left: 3px solid #9B8BF4;
+
+    border-right: 3px solid #9B8BF4;
 }

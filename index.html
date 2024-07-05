@@ -125,16 +125,32 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="repotAbuseModalLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="repotAbuseModalLabel">Reportar Abuso</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <form id="formReport" action="">
+                        <label for="inputReportFecha">Fecha</label>
+                        <input class="form-control" type="date" name="fecha" id="inputReportFecha" required>
+
+                        <label for="inputReportLocalidad">Localidad</label>
+                        <input class="form-control" type="text" name="localidad" id="inputReportLocalidad" required>
+
+                        <label for="inputReportCalle">Calle</label>
+                        <input class="form-control" type="text" name="calle" id="inputReportCalle" required>
+
+                        <label for="inputReportAltura">Altura</label>
+                        <input class="form-control" type="number" name="altura" id="inputReportAltura" required>
+                        
+                        <button>Enviar Reporte</button>
+                    </form>
                 </div>
+                <!--
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
+                -->
             </div>
         </div>
     </div>
@@ -313,7 +329,7 @@
     <footer>
         <div class="footer-fadeout"></div>
         <div class="footer-content">
-            <div>
+            <div class="logo-wrapper">
                 <div class="logo">
         
                     <img src="images/logo.png" alt="" srcset="">
@@ -334,9 +350,13 @@
                     <li>Banco Nacion</li>
                 </ul>
                 <ul>
-                    <li>Inicio</li>
-                    <li>Sobre Nosotros</li>
-                    <li>Nuestros Animales</li>
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="about.html">Sobre Nosotros</a>
+                    </li>
+                    <li><a href="animals.html">Nuestros Animales</a></li>
                 </ul>
             </div>
 
