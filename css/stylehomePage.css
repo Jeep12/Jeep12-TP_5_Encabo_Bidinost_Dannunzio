@@ -1,21 +1,19 @@
 .inicio{
-  display: grid;
-  grid-template-areas:
-      ". article-1 ."
-      ". article-2 .";
-  grid-template-columns: 1fr 1fr 1fr; 
-   height: 100vh;
+  display:flex;
+  flex-direction: column;
+  flex-grow: 60vh;
 }
+
  .article-1 {
-  grid-area: article-1;
   background-image: url("../images/caballoReabHome.jpg");
   background-repeat: no-repeat;
   grid-column: 1 / span 3;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* define el grid en 8*/
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr 0.3fr; /* define el grid en 8*/
+  grid-template-rows: 0.1fr 1fr 0.3fr;
   gap: 40px; /* Espacio entre celdas */
  }
+
  .art-1{
   grid-column: 1 / span 4; /*ocupa la primera fila 2 espacios del grid*/
   grid-row: 2 / span 1;
@@ -30,8 +28,9 @@
 
  }
  .helpUs {
-  grid-column: 4 / span 2; /* Desde la cuarta columna y abarca dos columnas */
+  grid-column: 3 / span 3; /* Desde la cuarta columna y abarca dos columnas */
   grid-row: -2; /* En la última fila del grid */
+  height: 100%;
   margin-bottom: 20px;
 }
   h1,h2,h3,p{
@@ -70,6 +69,7 @@
   }
 
   .helpUs {
+    height: 50%;
     font-size: 30px;
     background-color: #F194B8;
     color: rgb(0, 0, 0);
@@ -82,7 +82,56 @@
   .helpUs:hover {
     background-color:#6f65aa ;
     border-color: #6f65aa;
+    color:white;
   }
-  .article-2 {
-    grid-area: article-2;
-}
+  .article-2{
+    display: grid;
+  grid-template-columns: 1fr 1fr; /* define el grid en 8*/
+  gap: 40px; /* Espacio entre celdas */
+  }
+  .art-2 > *{
+    color:black;
+    text-align: center;
+  }
+  .art-2 {
+    position: relative;
+    animation-name: slideLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+  }
+  @keyframes slideLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .statistics > *{
+    margin:20px;
+    color:rgb(255, 255, 255);
+    text-align: center;
+  }
+  .statistics {
+    background-image: url("../images/caballo-article2.jpg");
+    background-size: cover;
+    filter: grayscale(100%) brightness(100%) sepia(100%) hue-rotate(-50deg) saturate(300%);
+    position: relative;
+    animation-name: slideRight;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+  }
+  
+  @keyframes slideRight {
+    0% {
+      opacity: 0;
+      transform: translateX(+100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
