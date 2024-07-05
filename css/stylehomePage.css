@@ -1,137 +1,323 @@
-.inicio{
-  display:flex;
+.inicio {
+  display: flex;
   flex-direction: column;
-  flex-grow: 60vh;
+
 }
 
- .article-1 {
-  background-image: url("../images/caballoReabHome.jpg");
-  background-repeat: no-repeat;
-  grid-column: 1 / span 3;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr 0.3fr; /* define el grid en 8*/
-  grid-template-rows: 0.1fr 1fr 0.3fr;
-  gap: 40px; /* Espacio entre celdas */
- }
 
- .art-1{
-  grid-column: 1 / span 4; /*ocupa la primera fila 2 espacios del grid*/
-  grid-row: 2 / span 1;
- }
- .sect-1{
-  grid-column-start: 6;
-  grid-column-end: 8;
-  grid-row: 2 / span 1;
-  background-color: #46466a9c;
-  border-radius: 8px;
-  margin-left: 20px;
-
- }
- .helpUs {
-  grid-column: 3 / span 3; /* Desde la cuarta columna y abarca dos columnas */
-  grid-row: -2; /* En la última fila del grid */
+.article-1 {
+  position: relative;
   height: 100%;
-  margin-bottom: 20px;
 }
-  h1,h2,h3,p{
-    color: white;
-  }
-  .art-1{
-    background-color: #46466a7c;
-    border-radius: 8px;
-    margin-left: 20px;
-  }
-  .art-1 > *{
-    text-align: left;
-  }
-  .art-1 > h1{
-    font-size: 50pt;
-    color:#ffffff;
-    text-decoration: underline;
-    text-decoration-color: rgb(255, 255, 255);
-  }
-  .textArt-1{
-    margin-top: 5%;
-  }
-  .art-1 > h2{
-    font-size: 30pt;
-  }
-  .sect-1 > *{
-    text-align: center;
-  }
-  .sect-1 > h3{
-    padding-bottom: 40px;
-  }
-  .art-1, .sect-1 {
-    flex: 1;
-    padding: 20px;
-    margin-bottom: 100px;
+
+.slideshow {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+}
+
+.slider {
+  box-shadow: 0 20px 50px -25px rgba(0, 0, 0, 1);
+  height: 100%;
+}
+
+.slider-track {
+  transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  height: calc(100vh - 128px);
+
+}
+
+.infoArt1 {
+  position: absolute;
+  /* Posiciona el overlay sobre el contenido */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-filter-slider);
+  /* Fondo semi-transparente */
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 20px;
+  font-size: 30px;
+}
+
+.infoArt1 h1,
+.infoArt1 h3,
+.infoArt1 p {
+  margin-top: 0px;
+  margin-left: 100px;
+  color: white;
+}
+
+.infoArt1 h1 {
+  text-decoration: underline;
+  font-family: 'Helvetica Compressed';
+  font-size: 60px;
+  letter-spacing: 6px;
+  color: var(--primary-color);
+  margin-top: 70px;
+}
+
+.infoArt1 h3 {
+  font-family: 'Helvetica Compressed';
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+.infoArt1 p {
+  width: 35em;
+  font-size: 18px;
+  font-family: 'Helvetica';
+
+}
+
+.infoArt1 button {
+  padding: 7px;
+  width: 250px;
+  background-color: var(--third-color);
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin: auto;
+  font-family: 'Helvetica Bold Oblique';
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  font-size: 15px;
+}
+
+.infoArt1 button:hover {
+  background-color: #9B8BF4;
+  box-shadow: inset 0 0 10px #ffffff;
+  color: #46466A;
+}
+
+.article-2 {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.article-2 .art2Left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  gap: 50px;
+}
+
+.art2Left h2 {
+  font-size: 60px;
+  margin-top: 100px;
+  text-transform: uppercase;
+  font-family: 'Helvetica Compressed';
+  letter-spacing: 6px;
+  color: #46466A;
+}
+
+.art2Left p {
+  width: 50em;
+  text-align: center;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-family: 'Helvetica';
+}
+
+
+.article-2 .art2Right {
+  width: 50%;
+  background: url('../images/cartonero.jpeg') no-repeat;
+  background-color: rgba(255, 255, 255, 0.4);
+  background-size: cover;
+
+}
+
+.wrapper-list-stats {
+
+  width: 100%;
+  height: 100%;
+  background-color: #6d4b75ce;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-2 .art2Right ul {
+  color: white;
+}
+
+.article-2 .art2Right ul li {
+  list-style: none;
+  padding: 0px;
+  font-size: 35px;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 700;
+  font-family: 'Helvetica';
+
+}
+
+.article-2 .art2Right ul li span {
+  font-size: 27px;
+  font-weight: 500;
+
+}
+
+.article-2 .art2Right ul li i {
+  font-size: 35px;
+}
+
+.article-3 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+.tittleEquino {
+  background-color: #46466A;
+  color: white;
+  text-align: center;
+  box-shadow: 0px 10px 5px #9B8BF4;
+  font-family: 'Helvetica Compressed';
+  letter-spacing: 3px;
+  font-size: 45px;
+  padding: 10px;
+}
+.wrapper-slider-art3 {
+  height: 50%;
+  width: 100%;
+}
+.slider2 {
+  width: 100%; /* Asegura que el slider ocupe el 100% del ancho del contenedor */
+  height: 50vh; /* Usa vh para definir la altura relativa a la vista del puerto */
+  overflow: hidden; /* Oculta cualquier contenido que se desborde */
+ 
+}
+
+.slider2 div {
+  height: 100%; /* Asegura que los elementos hijos ocupen el 100% de la altura del slider */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider2 img {
+  width: 100%; /* Ajusta el ancho de las imágenes para que ocupen el 100% del contenedor */
+  height: 100%; /* Ajusta la altura de las imágenes para que ocupen el 100% del contenedor */
+  object-fit: cover; /* Ajusta la imagen para que se muestre completamente */
+  object-position: 0px 10px;
+
+}
+.wrapper-equino {
+  display: flex;
+  height: 50%;
+  width: 100%;
+
+}
+
+.wrapper-equino div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+ 
+
+}
+.wrapper-equino div p {
+  width: 400px;
+  margin: auto;
+}
+.wrapper-equino div input {
+  width: 250px;
+  margin: auto;
+}
+.article-4 {
+  height: 100vh;
+  width: 100%;
+  background-color: #46466A;
+}
+@-webkit-keyframes slideInLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    visibility: visible;
   }
 
-  .helpUs {
-    height: 50%;
-    font-size: 30px;
-    background-color: #F194B8;
-    color: rgb(0, 0, 0);
-    border-color:#F194B8;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow:10px 10px 5px #00000053 ;
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    visibility: visible;
   }
-  
-  .helpUs:hover {
-    background-color:#6f65aa ;
-    border-color: #6f65aa;
-    color:white;
-  }
-  .article-2{
-    display: grid;
-  grid-template-columns: 1fr 1fr; /* define el grid en 8*/
-  gap: 40px; /* Espacio entre celdas */
-  }
-  .art-2 > *{
-    color:black;
-    text-align: center;
-  }
-  .art-2 {
-    position: relative;
-    animation-name: slideLeft;
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
-  }
-  @keyframes slideLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-100%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
+}
+
+@keyframes slideInLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    visibility: visible;
   }
 
-  .statistics > *{
-    margin:20px;
-    color:rgb(255, 255, 255);
-    text-align: center;
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    visibility: visible;
   }
-  .statistics {
-    background-image: url("../images/caballo-article2.jpg");
-    background-size: cover;
-    filter: grayscale(100%) brightness(100%) sepia(100%) hue-rotate(-50deg) saturate(300%);
-    position: relative;
-    animation-name: slideRight;
-    animation-duration: 4s;
-    animation-timing-function: ease-out;
+}
+
+@-webkit-keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
   }
-  
-  @keyframes slideRight {
-    0% {
-      opacity: 0;
-      transform: translateX(+100%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    visibility: visible;
   }
+}
+
+@keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+.slide-in-left {
+  -webkit-animation: slideInLeft 3s forwards;
+  animation: slideInLeft 3s forwards;
+}
+
+.slide-in-right {
+  -webkit-animation: slideInRight 3s forwards;
+  animation: slideInRight 3s forwards;
+}

@@ -2,40 +2,60 @@
 @import url("register.css");
 @import url("singin.css");
 
-
+:root {
+    --primary-color: #BDB4F9;
+    --secondary-color: #9B8BF4;
+    --third-color: #46466A;
+    --bg-filter-slider: #46466a8c;
+}
 
 * {
     padding: 0;
     margin: 0;
+
+    /* Oculta la barra de desplazamiento horizontal */
+
 }
-.btnGoogle i,.btnMeta i {
-    color: white  !important;
+
+body {
+    overflow-x: hidden;
+
 }
+
+.btnGoogle i,
+.btnMeta i {
+    color: white !important;
+}
+
 .btnGoogle {
     background-color: #EA4335;
     color: white;
     font-family: 'Helvetica';
     border-radius: 10px;
-    border:none;
+    border: none;
     padding: 3px;
 
 }
+
 .btnMeta {
-    background-color:  #1877F2;
+    background-color: #1877F2;
     color: white;
     font-family: 'Helvetica';
     border-radius: 10px;
     padding: 3px;
     border: none;
 }
+
 .btnGoogle:hover {
     background-color: #EA4335;
-    box-shadow: inset 0 0 10px #d2948e; 
+    box-shadow: inset 0 0 10px #d2948e;
 }
+
 .btnMeta:hover {
-    background-color:  #1f62ba;
+    background-color: #1f62ba;
     box-shadow: inset 0 0 10px #4d78b1;
 }
+
 @font-face {
     font-family: 'Helvetica';
     font-style: normal;
@@ -89,10 +109,28 @@
     display: flex !important;
     gap: 5px;
 }
+
 .deleteElement {
     display: none !important;
 }
 
-.helvetica{
+.helvetica {
     font-family: 'Helvetica';
 }
+
+/* Estilo para la barra de desplazamiento en Webkit (Chrome, Safari) */
+body::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--third-color); /* Color del área detrás de la barra de desplazamiento */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--secondary-color); /* Color de la barra de desplazamiento */
+  }
+  
+  body::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color); /* Color de la barra de desplazamiento al pasar el cursor sobre ella */
+  }

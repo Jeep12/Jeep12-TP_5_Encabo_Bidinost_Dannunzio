@@ -1,8 +1,4 @@
-:root {
-    --primary-color: #BDB4F9;
-    --secondary-color: #9B8BF4;
-    --third-color: #46466a;
-}
+
 /* Estilo por defecto del botón */
 .custom-toggler {
     border: 1px solid transparent; /* Color del borde por defecto */
@@ -39,6 +35,8 @@
 }
 
 .navigation {
+    position:sticky ;
+    top:0px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -67,7 +65,7 @@
 }
 
 .networks ul li i {
-    color: #9B8BF4;
+    color: var(--third-color);
     text-shadow: none;
 
 }
@@ -108,7 +106,7 @@
     font-family: 'Helvetica';
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    color: #9B8BF4;
+    color: var(--third-color);
     font-size: 13px;
 
 
@@ -173,7 +171,8 @@
 }
 
 .navbar {
-    background: #46466ab8 !important;
+
+    background: #46466a !important;
     padding: 0px !important;
 }
 

@@ -1,25 +1,8 @@
 
-function register() {
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const wrapperImg = document.querySelector('.wrapper-img');
-    
-        wrapperImg.addEventListener('mousemove', function (e) {
-            const rect = wrapperImg.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-    
-            const moveX = (x / rect.width) * 100;
-            const moveY = (y / rect.height) * 100;
-    
-            wrapperImg.style.backgroundPosition = `${moveX}% ${moveY}%`;
-        });
-    
-        wrapperImg.addEventListener('mouseleave', function () {
-            wrapperImg.style.backgroundPosition = 'center';
-        });
-    });
-    
+
+document.addEventListener('DOMContentLoaded', function () {
+
 
     const validColor = "green";
     const invalidColor = "gray";
@@ -37,67 +20,71 @@ function register() {
     //Iconos candados
     let icons = document.querySelectorAll(".iconLock");
 
+    if (confirmPasswordRegister) {
 
-    confirmPasswordRegister.addEventListener("input", () => {
-        let confirmPassword = confirmPasswordRegister.value;
-        let iconPasswordMatch = document.getElementById("iconPasswordMatch");
-        const passwordMatchDiv = document.querySelector('#passwordMatch');
+        confirmPasswordRegister.addEventListener("input", () => {
+            let confirmPassword = confirmPasswordRegister.value;
+            let iconPasswordMatch = document.getElementById("iconPasswordMatch");
+            const passwordMatchDiv = document.querySelector('#passwordMatch');
 
-        if (confirmPassword == passwordValue) {
-            updateIconStyle(borderWidth, iconPasswordMatch, validColor, validBackground);
-        } else {
-            updateIconStyle(borderWidth, iconPasswordMatch, invalidColor, invalidBackground);
+            if (confirmPassword == passwordValue) {
+                updateIconStyle(borderWidth, iconPasswordMatch, validColor, validBackground);
+            } else {
+                updateIconStyle(borderWidth, iconPasswordMatch, invalidColor, invalidBackground);
 
-        }
+            }
 
-    })
+        })
 
+    }
     //levanto form con FormData
 
     const form = document.getElementById('formRegister');
+    if (form) {
 
-    form.addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevenir el envío por defecto del formulario
 
-        const formData = new FormData(form);
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevenir el envío por defecto del formulario
 
-        const name = formData.get('name');
-        const lastName = formData.get('lastName');
-        const email = formData.get('emailRegister');
-        const password = formData.get('passwordSingUp');
-        const repeatPassword = formData.get('repeatPasswordSingUp');
+            const formData = new FormData(form);
 
-        if (repeatPassword == passwordValue) {
-            const data = {
-                name: name,
-                lastName: lastName,
-                email: email,
-                password: password,
-                acces_level: 1, // Nivel de acceso fijo
-                image: "", // Imagen fija
-            }
-            // Enviar los datos a la API
-            fetch('https://667894100bd45250561f2838.mockapi.io/api/users', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-                .then(response => response.json())
-                .then(data => {
-                    toastAlert("Usuario creado exitosamente")
+            const name = formData.get('name');
+            const lastName = formData.get('lastName');
+            const email = formData.get('emailRegister');
+            const password = formData.get('passwordSingUp');
+            const repeatPassword = formData.get('repeatPasswordSingUp');
+
+            if (repeatPassword == passwordValue) {
+                const data = {
+                    name: name,
+                    lastName: lastName,
+                    email: email,
+                    password: password,
+                    acces_level: 1, // Nivel de acceso fijo
+                    image: "", // Imagen fija
+                }
+                // Enviar los datos a la API
+                fetch('https://667894100bd45250561f2838.mockapi.io/api/users', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
                 })
-                .catch((error) => {
-                    console.error('Error:', error);
-                    // Aquí puedes manejar los errores, por ejemplo, mostrar un mensaje de error
-                });
-        }
+                    .then(response => response.json())
+                    .then(data => {
+                        toastAlert("Usuario creado exitosamente")
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                        // Aquí puedes manejar los errores, por ejemplo, mostrar un mensaje de error
+                    });
+            }
 
-    });
+        });
 
 
-
+    }
 
     let btnTogglePassword = document.querySelectorAll(".togglePasswordRegister");
     btnTogglePassword.forEach(button => {
@@ -142,45 +129,46 @@ function register() {
 
 
         let inputPassword = document.getElementById("passwordSingUp");
-        inputPassword.addEventListener("input", validatePassword);
+        if (inputPassword) {
+            inputPassword.addEventListener("input", validatePassword);
 
-        function validatePassword() {
-            let password = inputPassword.value;
-            passwordValue = inputPassword.value;
-            let isValid = true;
+            function validatePassword() {
+                let password = inputPassword.value;
+                passwordValue = inputPassword.value;
+                let isValid = true;
 
-            if (hasLength(password)) {
-                updateIconStyle(borderWidth, iconLength, validColor, validBackground);
-            } else {
-                updateIconStyle(borderWidth, iconLength, invalidColor, invalidBackground);
-                isValid = false;
+                if (hasLength(password)) {
+                    updateIconStyle(borderWidth, iconLength, validColor, validBackground);
+                } else {
+                    updateIconStyle(borderWidth, iconLength, invalidColor, invalidBackground);
+                    isValid = false;
+                }
+
+                if (hasUppercase(password)) {
+                    updateIconStyle(borderWidth, iconUppercase, validColor, validBackground);
+                } else {
+                    updateIconStyle(borderWidth, iconUppercase, invalidColor, invalidBackground);
+                    isValid = false;
+                }
+
+                if (hasSpecialChar(password)) {
+                    updateIconStyle(borderWidth, iconSpecialChar, validColor, validBackground);
+                } else {
+                    updateIconStyle(borderWidth, iconSpecialChar, invalidColor, invalidBackground);
+                    isValid = false;
+                }
+
+                if (hasNumber(password)) {
+                    updateIconStyle(borderWidth, iconNumber, validColor, validBackground);
+                } else {
+                    updateIconStyle(borderWidth, iconNumber, invalidColor, invalidBackground);
+                    isValid = false;
+                }
+
+                return isValid;
             }
 
-            if (hasUppercase(password)) {
-                updateIconStyle(borderWidth, iconUppercase, validColor, validBackground);
-            } else {
-                updateIconStyle(borderWidth, iconUppercase, invalidColor, invalidBackground);
-                isValid = false;
-            }
-
-            if (hasSpecialChar(password)) {
-                updateIconStyle(borderWidth, iconSpecialChar, validColor, validBackground);
-            } else {
-                updateIconStyle(borderWidth, iconSpecialChar, invalidColor, invalidBackground);
-                isValid = false;
-            }
-
-            if (hasNumber(password)) {
-                updateIconStyle(borderWidth, iconNumber, validColor, validBackground);
-            } else {
-                updateIconStyle(borderWidth, iconNumber, invalidColor, invalidBackground);
-                isValid = false;
-            }
-
-            return isValid;
         }
-
-        return validatePassword();
     }
 
     function updateIconStyle(borderWidth, icon, color, background) {
@@ -240,7 +228,6 @@ function register() {
     }
 
 
-}
 
 
-export { register }; // Exportar la función checkPassword
+});
