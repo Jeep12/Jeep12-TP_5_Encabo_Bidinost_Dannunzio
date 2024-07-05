@@ -2,6 +2,7 @@
     background-image: linear-gradient(white,#46466A);
 }
 .footer-content{
+    padding-top: 1rem;
     display: flex;
     flex-direction: row;
     background-color: #46466A;
@@ -9,24 +10,31 @@
     align-items: center;
 }
 
+footer{
+    margin-top: 50px;
+}
+
 .footer-links{
     padding-right: 5vw;
 }
 
+footer > *{
+    color: white !important;
+}
 footer a{
     text-decoration: none;
-    color: rgb(33, 37, 41) !important;
+    color: white;
 }
 
 footer .logo img{
-    border: 1px solid black;
+    border: 1px solid white;
 }
 footer .logo, footer .networks{
     padding-left: 5vw;
 }
 
 footer .networks i{
-    color: black;
+    color: white;
 }
 .footer-fadeout{
     height: 10vh;
