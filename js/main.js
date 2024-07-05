@@ -69,28 +69,7 @@ $('.slider1').slick({
 
 //OBJETOS A LOS QUE SE LE APLICA LA ANIMACION 
 //CUANDO SE DISPARA EL OBSERVER DEL
-/* const article2 = document.querySelector("#article-2");
 
-const art2Right = document.querySelector(".art2Right");
-const titleArt2 = document.querySelector("#titleArt2");
-const parrafosArt2 = document.querySelectorAll(".animationLeft");
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            if (entry.target === article2) {
-
-                art2Right.classList.add("slide-in-right");
-                titleArt2.classList.add("slide-in-left");
-                for (let i = 0; i < parrafosArt2.length; i++) {
-                    parrafosArt2[i].classList.add("slide-in-left");
-                }
-            }
-        }
-    });
-});
-
-*/
 const article2 = document.querySelector("#article-2");
 
 const art2Right = document.querySelector(".art2Right");
@@ -130,4 +109,3 @@ $('.slider2').slick({
     autoplay: true,
 
 })
-

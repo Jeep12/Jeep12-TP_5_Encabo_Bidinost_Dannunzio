@@ -115,13 +115,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-
-    
-    const lengthDiv = document.querySelector('#length');
-    const uppercaseDiv = document.querySelector('#uppercase');
-    const specialCharDiv = document.querySelector('#special-char');
-    const numberDiv = document.querySelector('#number');
-    
     let iconLength = document.querySelector('.iconLength');
     let iconUppercase = document.querySelector('.iconUppercase');
     let iconSpecialChar = document.querySelector('.iconSpecialChar');

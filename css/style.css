@@ -105,6 +105,11 @@ body {
     src: local('Helvetica Light'), url('../utils/fonts/helvetica-light-587ebe5a59211.woff') format('woff');
 }
 
+.piggy{
+   filter: invert(100%);
+   width:40px;
+   margin-bottom: 10px;
+}
 .addElement {
     display: flex !important;
     gap: 5px;
