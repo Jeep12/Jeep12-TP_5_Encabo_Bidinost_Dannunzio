@@ -89,7 +89,7 @@
 
 }
 
-.infoArt1 button {
+.infoArt1 a {
   padding: 7px;
   width: 250px;
   background-color: var(--third-color);
@@ -105,7 +105,7 @@
   font-size: 15px;
 }
 
-.infoArt1 button:hover {
+.infoArt1 a:hover {
   background-color: #9B8BF4;
   box-shadow: inset 0 0 10px #ffffff;
   color: #46466A;
@@ -386,6 +386,12 @@
 }
 
 @media (max-width: 991px) {
+  .textInfoArt1 {
+    margin-top: 20px;
+  }
+  .linkDonation {
+    margin-top: 0px;
+  }
   .infoArt1 button {
 
     margin: -20px auto;
@@ -406,13 +412,14 @@
     font-size: 25px;
   }
 
-  .article-1 {}
+
 
   .infoArt1 h1,
   .infoArt1 h3,
   .infoArt1 p {
     text-align: center;
-    margin-left: 0px;
+  
+    margin: 0 !important;
   }
 
   .item img {
