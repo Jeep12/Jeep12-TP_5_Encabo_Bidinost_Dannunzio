@@ -213,7 +213,7 @@
 
 .slider2 {
   padding: 0px !important;
-  margin-top: -10px;
+ 
   width: 100%;
   /* Asegura que el slider ocupe el 100% del ancho del contenedor */
   height: 50vh;
@@ -238,7 +238,6 @@
   /* Ajusta la altura de las imágenes para que ocupen el 100% del contenedor */
   object-fit: cover;
   /* Ajusta la imagen para que se muestre completamente */
-  object-position: 0px 10px;
 
 }
 
@@ -373,12 +372,33 @@
   }
 
 }
-@media (max-width:1921px) {}
+@media (max-width:1921px) {
+  .img1Art3 {
+    object-position: 0px -100px !important;
+  }
+  .img2Art3{
+   object-position: 0px -160px !important;
+  }
+  .img3Art3{
+    object-position: 0px -80px !important;
+
+  }
+}
 
 @media (max-width: 991px) {
   .infoArt1 button {
 
     margin: -20px auto;
+
+  }
+  .img1Art3 {
+    object-position: 0px 0px !important;
+  }
+  .img2Art3{
+   object-position: 0px 0px !important;
+  }
+  .img3Art3{
+    object-position: 0px 0px !important;
 
   }
 

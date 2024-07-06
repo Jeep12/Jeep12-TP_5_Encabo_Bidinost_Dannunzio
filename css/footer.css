@@ -17,6 +17,8 @@ footer {
 
 .footer-links {
     padding-right: 5vw;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .footer-links ul li {
