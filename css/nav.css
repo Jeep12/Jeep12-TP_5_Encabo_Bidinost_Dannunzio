@@ -224,6 +224,7 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-right: 75px;
+    display: none;
 }
 
 .report:hover {
