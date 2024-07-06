@@ -3,6 +3,18 @@
 @import url("singin.css");
 @import url("footer.css");
 
+.deckDonaciones{
+    flex-direction: column;
+}
+.deckDonaciones .card{
+    margin: 1vw 1rem;
+}
+.deckDonaciones .card-title{
+    margin: auto;
+}
+.h1Donacion{
+    text-align: center;
+}
 :root {
     --primary-color: #BDB4F9;
     --secondary-color: #9B8BF4;
@@ -173,4 +185,17 @@ body::-webkit-scrollbar {
   
   body::-webkit-scrollbar-thumb:hover {
     background: var(--primary-color); /* Color de la barra de desplazamiento al pasar el cursor sobre ella */
+  }
+
+  @media (min-width:700px){
+    .deckDonaciones{
+        flex-direction: row;
+    }
+    .deckDonaciones .card{
+        max-width: 30vw;
+    }
+  }
+
+  h2{
+      word-break: break-word;
   }
