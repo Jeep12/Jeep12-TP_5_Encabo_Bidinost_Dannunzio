@@ -7,10 +7,14 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="utils/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="utils/slick/slick.css" />
+
     <link rel="stylesheet" href="utils/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="utils/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/aboutUs.css">
     <title>Equus</title>
 </head>
 
@@ -73,10 +77,11 @@
 
         <nav class="navbar navbar-expand-lg bg-body-tertiary ">
             <div class="container-fluid ">
-                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-bars"></i> </button>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -107,7 +112,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <div class="d-flex wrapper-btnReport">
+                    <div class="d-flex">
                         <button class="btn report" data-bs-toggle="modal" data-bs-target="#repotAbuse"> Reportar
                             abuso</button>
                     </div>
@@ -116,10 +121,7 @@
         </nav>
     </header>
 
-
-
-
-    <!-- Modal -->
+    <!-- MODAL REPORTAR ABUSO -->
     <div class="modal fade" id="repotAbuse" tabindex="-1" aria-labelledby="repotAbuseModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -162,6 +164,7 @@
         </div>
     </div>
 
+
     <!-- MODAL INICIAR SESION -->
     <div class="modal modalSingIn fade" id="singIn" tabindex="-1" aria-labelledby="singInModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -171,7 +174,6 @@
 
 
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
                 </div>
                 <div class="modal-body">
 
@@ -191,7 +193,7 @@
                         </div>
                         <div class="alert alert-dark mt-2" role="alert" style="padding: 3px; font-size: 13px;">
                             <p><i class="fa-solid fa-circle-exclamation"></i> Olvidaste tu contraseña
-                         
+                                <br>
                                 Haga click <a href="">aquí</a> para recuperarla
                                 <hr>
                                 Si aun no tienes cuenta puedes registrarte clickeando <a href="register.html">Aquí</a>
@@ -216,109 +218,47 @@
     </div>
 
 
-    <div class="wrapper-register">
-        <div class="wrapper-img">
-            <div class="info-register">
-                <h2>ÚNETE A NUESTRA MISÍON <i class="fa-solid fa-users"></i></h2>
-                <p>Tu apoyo es crucial para rescatar y rehabilitar caballos necesitados. Al registrarte en nuestra
-                    comunidad, te mantendremos informado sobre nuestras actividades, rescates y formas en las que puedes
-                    ayudar. Juntos, podemos hacer una diferencia en la vida de estos magníficos animales.</p>
-
-
-                <p>Puedes realizar donaciones para apoyar nuestra misión a través de varias plataformas: <b>Mercado
-                        Pago,
-                        Banco Nación y Banco Provincia</b>. Aceptamos pagos con tarjetas <b> Visa y MasterCard </b>.
-                    Cada contribución,
-                    grande o pequeña, ayuda a proporcionar el cuidado y la atención que nuestros caballos rescatados
-                    necesitan."
-                </p>
+    <h1 class="h1Donacion">Podes donar por cualquiera de estos metodos</h1>
+    <div class="card-deck d-flex deckDonaciones">
+        <div class="card">
+            <div class="d-flex flex-row">
+                <img class="card-img-top w-50" src="images/icobancoprovincia.png" alt="Card image cap">
+                <h2 class="card-title"> Banco Provincia</h2>
             </div>
+          <div class="card-body">
+            <p class="card-text">Alias: provinciaequusnobilis</p>
+            <p class="card-text">CVU: 8474826541658</p>
+            <p class="card-text">Titular: Asociasion Civil Equus Nobilis</p>
+          </div>
         </div>
-        <div class="form-register">
-            <form class="form" id="formRegister">
-                <h2>Registro</h2>
-                <div class="wrapper-name-lastname">
-                    <div class="name">
-                        <label for="nombre">Nombre:</label><br>
-                        <input type="text" id="name" name="name" placeholder="Ingrese su nombre aquí" required>
-
-                    </div>
-                    <div class="last-name">
-                        <label for="nombre">Apellido:</label><br>
-                        <input type="text" id="lastName" name="lastName" placeholder="Ingrese su apellido aquí"
-                            required>
-                    </div>
-                </div>
-
-                <div class="wrapper-email">
-
-                    <label for="email" id="emailRegister">Email:</label><br>
-                    <input type="email" id="emailRegister" name="emailRegister" placeholder="Ingrese su email aquí"
-                        required>
-
-                </div>
-                <div class="wrapper-password">
-
-                    <label for="password">Contraseña:</label>
-                    <div style="border-radius:10px; display: flex;background-color: white;align-items: center;">
-
-                        <input class="password" style="border:1px solid #46466a;" type="password" id="passwordSingUp"
-                            name="passwordSingUp" placeholder="Ingrese su contraseña aquí" required><span
-                            class="togglePasswordRegister" style="cursor: pointer;"><i style="margin-left: -32px;"
-                                class="fa-solid fa-lock iconLock"></i>
-                        </span>
-                    </div>
-                </div>
-                <div class="password-info">
-                    <div id="length"><i class="fas fa-check iconLength"></i> Al menos 8 caracteres</div>
-                    <div id="uppercase"><i class="fas fa-check iconUppercase"></i> Al menos una mayúscula</div>
-                    <div id="special-char"><i class="fas fa-check iconSpecialChar"></i> Al menos un carácter especial</div>
-                    <div id="number"><i class="fas fa-check iconNumber"></i> Al menos un número</div>
-                </div>
-       
-
-                <div class="wrapper-password">
-
-                    <label for="password">Repetir contraseña:</label>
-                    <div style="border-radius:10px; display: flex;background-color: white;align-items: center;">
-
-                        <input class="password" type="password" id="repeatPasswordSingUp" name="repeatPasswordSingUp"
-                            placeholder="Repita su contraseña " required><span style="cursor: pointer;"
-                            class="togglePasswordRegister"><i style="margin-left: -32px;"
-                                class="fa-solid fa-lock iconLock"></i> </span>
-                    </div>
-                    <div class="matchPassword">
-                        <div id="passwordMatch">
-                            <i class="fas fa-check" id="iconPasswordMatch" style="margin-top: 10px;"></i>
-
-                                <span id="passwordMatchText">Coinciden las contraseñas</span>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="conditionsAndTermins">
-                    <input style="width: 20px;" type="checkbox" name="">&nbsp;  <p>Estoy de acuerdo con los terminos y
-                    condiciones</p>
-                </div>
-              
-
-                <input class="submitRegister" type="submit" value="Registrarse">
-                <hr>
-                <div style="display: flex;flex-direction: column;gap: 10px;">
-                    <button class="btnGoogle"><i class="fa-brands fa-google-plus"></i> Registrarse con Google</button>
-                    <button class="btnMeta"><i class="fa-brands fa-facebook"></i> Registrarse con Facebook</button>
-
-                </div>
-
-            </form>
+        <div class="card">
+            <div class="d-flex flex-row">
+                <img class="card-img-top w-50" src="images/icobanconacion.png" alt="Card image cap">
+                <h2 class="card-title"> Banco Nacion</h2>
+            </div>
+          <div class="card-body">
+            <p class="card-text">Alias: equuscaballosnacion</p>
+            <p class="card-text">CVU: 415436203251651</p>
+            <p class="card-text">Titular: Asociasion Civil Equus Nobilis</p>
+          </div>
         </div>
-    </div>
+        <div class="card">
+            <div class="d-flex flex-row">
+                <img class="card-img-top w-50" src="images/mercadopagoIco.png" alt="Card image cap">
+                <h2 class="card-title"> Mercadopago</h2>
+            </div>
+          <div class="card-body">
+            <p class="card-text">Alias: equuscaballos.mp</p>
+            <p class="card-text">CVU: 000000516826221645</p>
+            <p class="card-text">Titular: Asociasion Civil Equus Nobilis</p>
+          </div>
+        </div>
+      </div>
     <footer>
         <div class="footer-fadeout"></div>
         <div class="footer-content">
             <div class="logo-wrapper">
                 <div class="logo">
-        
                     <img src="images/logo.png" alt="" srcset="">
                 </div>
                 <div class="d-flex flex-row networks">
@@ -358,6 +298,12 @@
 
         </div>
     </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <script src="utils/slick/slick.min.js"></script>
+
     <script src="utils/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script type="module" src="js/main.js"></script>
