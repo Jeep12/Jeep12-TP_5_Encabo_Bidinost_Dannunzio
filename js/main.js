@@ -13,18 +13,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     session = currentUser ? true : false;
     
     // Ajustar visibilidad de los botones  registrarse e ingresar
+    let reportAbuse = document.getElementById("reportAbuse");
     let btnsSingUpSingIn = document.getElementById("wrapper-links");
     let panelUser = document.getElementById("panelUser");
     if (session) {
 
         btnsSingUpSingIn.classList.add("deleteElement");
         panelUser.classList.add("addElement");
+        
+        reportAbuse.classList.add("addElement");
 
     } else {
 
         btnsSingUpSingIn.classList.remove("deleteElement");
         btnsSingUpSingIn.classList.add("addElement");
 
+        reportAbuse.classList.add("deleteElement");
         panelUser.classList.add("deleteElement");
         panelUser.classList.remove("addElement");
 
