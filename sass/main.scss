@@ -1,25 +1,156 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-.modal-content{
-    border-radius: 0px;
-}
-.modal-header {
-    border: none;
-}
-.modal-header h1 {
-    text-align: center;
-    width:100% ;
-    color: #46466a;
-}
-.modal-body {
-    form {
-        background-color: green !important;
-        width: 100px;
-    }
-}
+$color_1: white;
+$color_2: #46466A;
+$font-family_1: 'Helvetica';
+$background-color_1: #EA4335;
+$background-color_2: #1877F2;
+$background-color_3: #1f62ba;
+$background-color_4: var(--third-color);
+$background-color_5: #9B8BF4;
 
-.modal-footer {
-    border: none;
+@import "nav.css";
+@import "register.css";
+@import "singin.css";
+@import "footer.css";
+@font-face {
+	font-family: 'Helvetica';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Helvetica'), url('../utils/fonts/Helvetica.woff') format('woff');
+}
+@font-face {
+	font-family: 'Helvetica Oblique';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Helvetica Oblique'), url('../utils/fonts/Helvetica-Oblique.woff') format('woff');
+}
+@font-face {
+	font-family: 'Helvetica Compressed';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Helvetica Compressed'), url('../utils/fonts/helvetica-compressed-5871d14b6903a.woff') format('woff');
+}
+@font-face {
+	font-family: 'Helvetica Rounded Bold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Helvetica Rounded Bold'), url('../utils/fonts/helvetica-rounded-bold-5871d05ead8de.woff') format('woff');
+}
+@font-face {
+	font-family: 'Helvetica';
+	font-style: normal;
+	font-weight: bold;
+	src: local('Helvetica'), url('../utils/fonts/Helvetica-Bold.woff') format('woff');
+}
+@font-face {
+	font-family: 'Helvetica Bold Oblique';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Helvetica Bold Oblique'), url('../utils/fonts/Helvetica-BoldOblique.woff') format('woff');
+}
+@font-face {
+	font-family: 'Helvetica Light';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Helvetica Light'), url('../utils/fonts/helvetica-light-587ebe5a59211.woff') format('woff');
+}
+/* Estilo para la barra de desplazamiento en Webkit (Chrome, Safari) */
+&:root {
+	--primary-color: #BDB4F9;
+	--secondary-color: #9B8BF4;
+	--third-color: #46466A;
+	--bg-filter-slider: #46466a8c;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	overflow-x: hidden;
+	&::-webkit-scrollbar {
+		width: 12px;
+	}
+	&::-webkit-scrollbar-track {
+		background: var(--third-color);
+	}
+	&::-webkit-scrollbar-thumb {
+		background: var(--secondary-color);
+		&:hover {
+			background: var(--primary-color);
+		}
+	}
+}
+.btnGoogle {
+	i {
+		color: $color_1 !important;
+	}
+	background-color: $background-color_1;
+	color: $color_1;
+	font-family: $font-family_1;
+	border-radius: 10px;
+	border: none;
+	padding: 3px;
+	&:hover {
+		background-color: $background-color_1;
+		box-shadow: inset 0 0 10px #d2948e;
+	}
+}
+.btnMeta {
+	i {
+		color: $color_1 !important;
+	}
+	background-color: $background-color_2;
+	color: $color_1;
+	font-family: $font-family_1;
+	border-radius: 10px;
+	padding: 3px;
+	border: none;
+	&:hover {
+		background-color: $background-color_3;
+		box-shadow: inset 0 0 10px #4d78b1;
+	}
+}
+.addElement {
+	display: flex !important;
+	gap: 5px;
+}
+.deleteElement {
+	display: none !important;
+}
+.helvetica {
+	font-family: $font-family_1;
+}
+#formReport {
+	.form-group {
+		padding: 0.5rem;
+	}
+	button {
+		padding: 7px;
+		background-color: $background-color_4;
+		border-radius: 10px;
+		text-decoration: none;
+		color: $color_1;
+		text-align: center;
+		width: fit-content;
+		font-family: $font-family_1;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		border: none;
+		margin-top: 1rem;
+		&:hover {
+			background-color: $background-color_5;
+			box-shadow: inset 0 0 10px #ffffff;
+			color: $color_2;
+		}
+	}
+}
+.direccion {
+	display: flex;
+	flex-direction: row;
+}
+.calle {
+	width: 70%;
+}
+.altura {
+	width: 30%;
 }
